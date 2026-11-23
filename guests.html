@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Guests — Care To Listen Podcast</title>
+  <meta name="description" content="Meet the clinicians, researchers, artists, and storytellers who join Care To Listen to share their lived experiences and clinical expertise.">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+
+  <!-- Floating Header -->
+  <header class="cospace-header-wrap">
+    <nav class="cospace-nav-pill" aria-label="Main Navigation">
+      <a href="/" class="cospace-brand">
+        <span class="brand-dot"></span>
+        CareToListen<span class="brand-asterisk">*</span>
+      </a>
+
+      <div class="cospace-nav-links">
+        <a href="/episodes.html" class="nav-link">Episodes</a>
+        <a href="/hosts.html" class="nav-link">Hosts</a>
+        <a href="/guests.html" class="nav-link active">Guests</a>
+        <a href="/videos.html" class="nav-link">Videos</a>
+        <a href="/about.html" class="nav-link">About</a>
+        <a href="/resources.html" class="nav-link">Crisis Resources</a>
+        <a href="/admin.html" class="nav-link nav-link-admin">Admin</a>
+      </div>
+
+      <div class="cospace-nav-actions">
+        <button class="cospace-pill-btn cospace-pill-btn-primary" data-play-ep="108">
+          <span class="play-icon-state">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+          </span>
+          <span>Listen Now</span>
+        </button>
+        <button id="mobile-menu-btn" class="cospace-mobile-toggle" aria-label="Open navigation menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <aside id="mobile-nav-drawer" class="mobile-drawer">
+    <div class="drawer-header">
+      <span class="cospace-brand">CareToListen<span class="brand-asterisk">*</span></span>
+      <button id="mobile-close-btn" class="drawer-close">&times;</button>
+    </div>
+    <div class="drawer-links">
+      <a href="/episodes.html">All Episodes</a>
+      <a href="/hosts.html">Meet The Hosts</a>
+      <a href="/guests.html" class="active">Studio Guests</a>
+      <a href="/videos.html">4K Soundstage</a>
+      <a href="/about.html">Our Ethos & Story</a>
+      <a href="/mission.html">4 Somatic Pillars</a>
+      <a href="/resources.html">24/7 Crisis Directory</a>
+      <a href="/request-episode.html">Pitch an Episode</a>
+      <a href="/become-a-guest.html">Guest Casting</a>
+      <a href="/contact.html">Studio Inquiries</a>
+      <a href="/admin.html">Staff Studio CMS</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- PAGE HERO -->
+    <section class="section-container page-header-section">
+      <div class="page-header-wrap">
+        <div class="page-kicker">
+          <span class="kicker-pill">STUDIO ROSTER</span>
+          <span class="kicker-sub">Lived Experience & Clinical Mastery</span>
+        </div>
+        <h1 class="page-title">Curated Guests</h1>
+        <p class="page-lead">
+          We invite neuroscientists, trauma clinicians, palliative doctors, and everyday people who have navigated the darkest corners of human experience with grace.
+        </p>
+      </div>
+    </section>
+
+    <!-- GUESTS GRID -->
+    <section class="section-container">
+      <div class="guests-grid">
+
+        <!-- Guest 1 -->
+        <article class="cospace-guest-card">
+          <div class="guest-card-top">
+            <img src="/assets/card_01_arch.jpg" alt="Dr. Kenji Sato" class="guest-card-avatar" loading="lazy">
+            <div class="guest-card-meta">
+              <span class="guest-discipline-badge">NEUROSCIENCE</span>
+              <h2 class="guest-name">Dr. Kenji Sato, MD, PhD</h2>
+              <p class="guest-title">Director of Cognitive Resilience Institute</p>
+            </div>
+          </div>
+          <p class="guest-bio">
+            Pioneer in polyvagal research and autonomic nervous system rehabilitation. Dr. Sato has spent twenty years studying secondary traumatic stress among emergency room surgeons, combat medics, and humanitarian workers.
+          </p>
+          <blockquote class="guest-quote">
+            “When caring hurts, it does not mean your heart is too soft. It means your nervous system is sounding an alarm that has been ignored for too long.”
+          </blockquote>
+          <div class="guest-card-actions">
+            <span class="guest-ep-tag">Featured in Ep #109</span>
+            <button class="cospace-pill-btn cospace-pill-btn-primary" data-play-ep="109">
+              <span class="play-icon-state">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+              </span>
+              <span>Listen Ep #109</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Guest 2 -->
+        <article class="cospace-guest-card">
+          <div class="guest-card-top">
+            <img src="/assets/card_02_aura.jpg" alt="Dr. Elena Rostova" class="guest-card-avatar" loading="lazy">
+            <div class="guest-card-meta">
+              <span class="guest-discipline-badge">FAMILY SYSTEMS</span>
+              <h2 class="guest-name">Dr. Elena Rostova, PsyD</h2>
+              <p class="guest-title">Clinical Psychologist & Author</p>
+            </div>
+          </div>
+          <p class="guest-bio">
+            Specialist in ambiguous loss and relational estrangement. Dr. Rostova helps adult children and parents navigate complex intergenerational boundaries without succumbing to debilitating guilt.
+          </p>
+          <blockquote class="guest-quote">
+            “Estrangement is rarely an act of cruelty. Almost always, it is an act of sheer psychological survival.”
+          </blockquote>
+          <div class="guest-card-actions">
+            <span class="guest-ep-tag">Featured in Ep #107</span>
+            <button class="cospace-pill-btn cospace-pill-btn-primary" data-play-ep="107">
+              <span class="play-icon-state">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+              </span>
+              <span>Listen Ep #107</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Guest 3 -->
+        <article class="cospace-guest-card">
+          <div class="guest-card-top">
+            <img src="/assets/card_05_bw.jpg" alt="Samuel Osei" class="guest-card-avatar" loading="lazy">
+            <div class="guest-card-meta">
+              <span class="guest-discipline-badge">BEREAVEMENT</span>
+              <h2 class="guest-name">Samuel Osei</h2>
+              <p class="guest-title">Author of 'The Architecture of Grief'</p>
+            </div>
+          </div>
+          <p class="guest-bio">
+            Following the sudden loss of his 16-year-old son, Samuel founded the Fathers in Mourning circle. He writes candidly about the suffocating pressure placed on men to remain emotionally numb in times of tragedy.
+          </p>
+          <blockquote class="guest-quote">
+            “Grief is love with no place to go. When men are told not to cry, that love turns to poison inside our chests.”
+          </blockquote>
+          <div class="guest-card-actions">
+            <span class="guest-ep-tag">Featured in Ep #106</span>
+            <button class="cospace-pill-btn cospace-pill-btn-primary" data-play-ep="106">
+              <span class="play-icon-state">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+              </span>
+              <span>Listen Ep #106</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Guest 4 -->
+        <article class="cospace-guest-card">
+          <div class="guest-card-top">
+            <img src="/assets/card_04_zine.jpg" alt="Carlos Vega" class="guest-card-avatar" loading="lazy">
+            <div class="guest-card-meta">
+              <span class="guest-discipline-badge">SOMATIC CAREER</span>
+              <h2 class="guest-name">Carlos Vega</h2>
+              <p class="guest-title">Somatic Strategist & Former Creative Director</p>
+            </div>
+          </div>
+          <p class="guest-bio">
+            After a life-threatening cardiac event at age 34 from chronic 80-hour workweeks, Carlos retrained in somatic psychology to help professionals dismantle workaholism and reclaim genuine rest.
+          </p>
+          <blockquote class="guest-quote">
+            “Burnout is not resolved by a two-week vacation to Bali. It is resolved by renegotiating your relationship to your own mortality.”
+          </blockquote>
+          <div class="guest-card-actions">
+            <span class="guest-ep-tag">Featured in Ep #104</span>
+            <button class="cospace-pill-btn cospace-pill-btn-primary" data-play-ep="104">
+              <span class="play-icon-state">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+              </span>
+              <span>Listen Ep #104</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Guest 5 -->
+        <article class="cospace-guest-card">
+          <div class="guest-card-top">
+            <img src="/assets/hero_scroll_editorial.jpg" alt="Dr. Leanne Thorne" class="guest-card-avatar" loading="lazy">
+            <div class="guest-card-meta">
+              <span class="guest-discipline-badge">NEURODIVERGENCE</span>
+              <h2 class="guest-name">Dr. Leanne Thorne, PhD</h2>
+              <p class="guest-title">Neurodivergent Clinician & Researcher</p>
+            </div>
+          </div>
+          <p class="guest-bio">
+            Dr. Thorne specializes in adult late-diagnosis ADHD and autism spectrum masking in women and gender-expansive individuals, guiding clients from shame into somatic self-acceptance.
+          </p>
+          <blockquote class="guest-quote">
+            “The relief of finally knowing you are not fundamentally broken, but simply operating with an alternative nervous system wiring, is indescribable.”
+          </blockquote>
+          <div class="guest-card-actions">
+            <span class="guest-ep-tag">Featured in Ep #103</span>
+            <button class="cospace-pill-btn cospace-pill-btn-primary" data-play-ep="103">
+              <span class="play-icon-state">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+              </span>
+              <span>Listen Ep #103</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Guest 6 -->
+        <article class="cospace-guest-card">
+          <div class="guest-card-top">
+            <img src="/assets/hero_editorial_model.jpg" alt="Dr. Jordan Chen" class="guest-card-avatar" loading="lazy">
+            <div class="guest-card-meta">
+              <span class="guest-discipline-badge">END-OF-LIFE CARE</span>
+              <h2 class="guest-name">Dr. Jordan Chen, MD</h2>
+              <p class="guest-title">Palliative Physician & Hospice Medical Director</p>
+            </div>
+          </div>
+          <p class="guest-bio">
+            Having accompanied more than a thousand human beings through their final hours, Dr. Chen shares the universal truths people whisper when social pretenses are stripped away.
+          </p>
+          <blockquote class="guest-quote">
+            “No one on their deathbed has ever asked to see their quarterly performance review. They only ask: Was I loved? Did I forgive enough?”
+          </blockquote>
+          <div class="guest-card-actions">
+            <span class="guest-ep-tag">Featured in Ep #098</span>
+            <button class="cospace-pill-btn cospace-pill-btn-primary" data-play-ep="108">
+              <span class="play-icon-state">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+              </span>
+              <span>Listen Episode</span>
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CASTING CTA -->
+    <section class="section-container">
+      <div class="cospace-callout-card">
+        <div class="callout-inner">
+          <span class="section-badge">GUEST CASTING</span>
+          <h3 class="callout-title">Would you like to sit across the table from Maya & Marcus?</h3>
+          <p class="callout-desc">
+            We welcome licensed practitioners, researchers, memoirists, and courageous individuals with lived experience. Our studio is an emotionally safe, non-exploitative environment.
+          </p>
+          <div class="callout-actions">
+            <a href="/become-a-guest.html" class="cospace-pill-btn cospace-pill-btn-primary">
+              <span>Submit Guest Casting Application</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MASTER FOOTER -->
+  <footer class="cospace-footer-wrapper">
+    <div class="cospace-footer-container">
+      <div class="footer-hero-brand">
+        <span class="footer-giant-text">CareToListen<span class="footer-asterisk">*</span></span>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-col-about">
+          <p class="footer-tagline">
+            An independent, listener-supported audio sanctuary produced in Seattle & Minneapolis.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Episodes</h4>
+          <ul class="footer-links">
+            <li><a href="/episodes.html">Latest Broadcasts</a></li>
+            <li><a href="/episodes.html?category=Mental+Health">Mental Health</a></li>
+            <li><a href="/episodes.html?category=Grief">Grief & Bereavement</a></li>
+            <li><a href="/videos.html">4K Soundstage</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="/hosts.html">Meet The Hosts</a></li>
+            <li><a href="/guests.html">Guest Directory</a></li>
+            <li><a href="/about.html">About & Ethos</a></li>
+            <li><a href="/mission.html">Our 4 Pillars</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Care & Support</h4>
+          <ul class="footer-links">
+            <li><a href="/resources.html">24/7 Crisis Directory</a></li>
+            <li><a href="tel:988">988 Suicide & Crisis Lifeline</a></li>
+            <li><a href="/admin.html">Studio CMS (Staff)</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        <p class="footer-copy">&copy; 2026 Care To Listen Media Collective.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING AUDIO PLAYER PILL DOCK -->
+  <div id="floating-audio-dock" class="cospace-audio-dock" role="region" aria-label="Persistent Audio Player">
+    <div class="dock-inner">
+      <div class="dock-left">
+        <img id="player-track-thumb" src="/assets/hero_meaningful_listening.jpg" alt="Episode Thumbnail" class="dock-thumb">
+        <div class="dock-meta">
+          <div class="dock-eyebrow">
+            <span id="player-track-ep" class="dock-ep-tag">EP #108</span>
+            <div id="player-eq-bars" class="eq-bars">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+          <span id="player-track-title" class="dock-title">Learning to Sit With the Silence</span>
+          <span id="player-track-guest" class="dock-guest">with Maya Lin & Marcus Vance</span>
+        </div>
+      </div>
+      <div class="dock-center">
+        <div class="dock-controls">
+          <button id="player-play-btn" class="dock-play-circle" aria-label="Play or pause audio">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+          </button>
+        </div>
+        <div class="dock-scrubber-wrap">
+          <span id="player-time-current" class="dock-time">00:00</span>
+          <div id="player-progress-bar" class="dock-progress-track">
+            <div id="player-progress-fill" class="dock-progress-fill"></div>
+          </div>
+          <span id="player-time-total" class="dock-time">44:18</span>
+        </div>
+      </div>
+      <div class="dock-right">
+        <div class="dock-vol-group">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+          <input id="player-volume-slider" type="range" min="0" max="1" step="0.05" value="0.8" class="dock-volume" aria-label="Audio Volume">
+        </div>
+        <button id="player-toggle-btn" class="dock-close-pill" aria-label="Minimize player">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

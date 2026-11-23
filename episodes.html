@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Episodes — Care To Listen Podcast</title>
+  <meta name="description" content="Explore all 109+ episodes of Care To Listen. Deep conversations on grief, polyvagal theory, somatic healing, and relationships.">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+
+  <!-- Floating Header -->
+  <header class="cospace-header-wrap">
+    <nav class="cospace-nav-pill" aria-label="Main Navigation">
+      <a href="/" class="cospace-brand">
+        <span class="brand-dot"></span>
+        CareToListen<span class="brand-asterisk">*</span>
+      </a>
+
+      <div class="cospace-nav-links">
+        <a href="/episodes.html" class="nav-link active">Episodes</a>
+        <a href="/hosts.html" class="nav-link">Hosts</a>
+        <a href="/guests.html" class="nav-link">Guests</a>
+        <a href="/videos.html" class="nav-link">Videos</a>
+        <a href="/about.html" class="nav-link">About</a>
+        <a href="/resources.html" class="nav-link">Crisis Resources</a>
+        <a href="/admin.html" class="nav-link nav-link-admin">Admin</a>
+      </div>
+
+      <div class="cospace-nav-actions">
+        <button class="cospace-pill-btn cospace-pill-btn-primary" data-play-ep="108">
+          <span class="play-icon-state">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+          </span>
+          <span>Listen Now</span>
+        </button>
+        <button id="mobile-menu-btn" class="cospace-mobile-toggle" aria-label="Open navigation menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <aside id="mobile-nav-drawer" class="mobile-drawer">
+    <div class="drawer-header">
+      <span class="cospace-brand">CareToListen<span class="brand-asterisk">*</span></span>
+      <button id="mobile-close-btn" class="drawer-close">&times;</button>
+    </div>
+    <div class="drawer-links">
+      <a href="/episodes.html" class="active">All Episodes</a>
+      <a href="/hosts.html">Meet The Hosts</a>
+      <a href="/guests.html">Studio Guests</a>
+      <a href="/videos.html">4K Soundstage</a>
+      <a href="/about.html">Our Ethos & Story</a>
+      <a href="/mission.html">4 Somatic Pillars</a>
+      <a href="/resources.html">24/7 Crisis Directory</a>
+      <a href="/request-episode.html">Pitch an Episode</a>
+      <a href="/become-a-guest.html">Guest Casting</a>
+      <a href="/contact.html">Studio Inquiries</a>
+      <a href="/admin.html">Staff Studio CMS</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- PAGE HERO -->
+    <section class="section-container page-header-section">
+      <div class="page-header-wrap">
+        <div class="page-kicker">
+          <span class="kicker-pill">THE ARCHIVES</span>
+          <span class="kicker-sub">109 Broadcasts</span>
+        </div>
+        <h1 class="page-title">Broadcast Library</h1>
+        <p class="page-lead">
+          Every conversation is recorded live in studio without rehearsed scripts. Stream in uncompressed audio or download show notes and clinical practice guides.
+        </p>
+
+        <!-- Search Bar & Filters -->
+        <div class="catalog-controls-wrap">
+          <div class="catalog-search-bar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="episode-search-input" placeholder="Search by topic, guest name, or keyword (e.g. polyvagal, grief, burnout)..." class="search-input">
+          </div>
+
+          <div class="category-pills-row" role="tablist">
+            <button class="category-pill-btn active" data-category="All">All Episodes</button>
+            <button class="category-pill-btn" data-category="Mental Health">Mental Health</button>
+            <button class="category-pill-btn" data-category="Neuroscience">Neuroscience</button>
+            <button class="category-pill-btn" data-category="Grief">Grief & Bereavement</button>
+            <button class="category-pill-btn" data-category="Relationships">Relationships</button>
+            <button class="category-pill-btn" data-category="Identity">Identity</button>
+            <button class="category-pill-btn" data-category="Career">Career & Rest</button>
+          </div>
+
+          <div class="catalog-status-bar">
+            <span id="episodes-count-indicator">Showing 9 Featured Episodes</span>
+            <span class="catalog-hint">Tip: Click any card's play button to stream instantly in bottom dock.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EPISODES GRID -->
+    <section class="section-container">
+      <div id="episodes-grid" class="episodes-grid">
+
+        <!-- Ep 109 -->
+        <article class="episode-card-item" data-category="Neuroscience">
+          <div class="ep-card-media-banner">
+            <img src="/assets/hero_scroll_editorial.jpg" alt="The Neurobiology of Compassion Fatigue" class="ep-cover-thumb" loading="lazy">
+            <div class="ep-media-badges">
+              <span class="ep-media-badge-tag">STUDIO MASTER</span>
+              <span class="ep-media-badge-dur">48 min</span>
+            </div>
+          </div>
+          <div class="ep-card-body">
+            <div class="ep-card-header">
+              <span class="ep-num-badge">EP #109</span>
+              <span class="ep-category-pill">Neuroscience</span>
+              <span class="ep-duration">OCT 2026</span>
+            </div>
+            <h2 class="ep-card-title">The Neurobiology of Compassion Fatigue: When Caring Hurts</h2>
+            <p class="ep-card-desc">
+              Exploring why frontline healthcare workers and therapists experience emotional numbness, the vagal nerve mechanics behind secondary trauma, and daily neuro-somatic resets.
+            </p>
+            <div class="ep-card-guest-row">
+              <img src="/assets/card_01_arch.jpg" alt="Dr. Kenji Sato" class="ep-guest-avatar">
+              <div class="ep-guest-info">
+                <span class="ep-card-guest">Dr. Kenji Sato</span>
+                <span class="ep-guest-title">Cognitive Resilience Institute</span>
+              </div>
+            </div>
+            <div class="ep-takeaways-box">
+              <div class="takeaway-bullet-sm">
+                <span class="dot"></span> Compassion fatigue is physiological downregulation, not moral weakness.
+              </div>
+              <div class="takeaway-bullet-sm">
+                <span class="dot"></span> The 3-minute bilateral stimulation technique for emergency calming.
+              </div>
+            </div>
+            <div class="ep-card-footer">
+              <button class="cospace-pill-btn cospace-pill-btn-primary ep-play-btn" data-play-ep="109">
+                <span class="play-icon-state">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+                </span>
+                <span>Listen (48m)</span>
+              </button>
+              <a href="https://open.spotify.com" target="_blank" rel="noopener" class="ep-sub-link">Spotify</a>
+              <a href="https://podcasts.apple.com" target="_blank" rel="noopener" class="ep-sub-link">Apple</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Ep 108 -->
+        <article class="episode-card-item ep-card-featured-highlight" data-category="Mental Health">
+          <div class="ep-card-media-banner">
+            <img src="/assets/hero_meaningful_listening.jpg" alt="Learning to Sit With the Silence" class="ep-cover-thumb" loading="lazy">
+            <div class="ep-media-badges">
+              <span class="ep-media-badge-tag">CRITIC'S PICK</span>
+              <span class="ep-media-badge-dur">44 min</span>
+            </div>
+          </div>
+          <div class="ep-card-body">
+            <div class="ep-card-header">
+              <span class="ep-num-badge">EP #108</span>
+              <span class="ep-category-pill">Mental Health</span>
+              <span class="ep-duration">SEP 2026</span>
+            </div>
+            <h2 class="ep-card-title">Learning to Sit With the Silence: Why We Rush to Fix What Only Needs to Be Felt</h2>
+            <p class="ep-card-desc">
+              Maya and Marcus examine the cultural addiction to rapid reassurance and premature advice-giving, breaking down why true presence is far more courageous than offering a solution.
+            </p>
+            <div class="ep-card-guest-row">
+              <img src="/assets/hero_meaningful_listening.jpg" alt="Maya & Marcus" class="ep-guest-avatar">
+              <div class="ep-guest-info">
+                <span class="ep-card-guest">Maya Lin & Marcus Vance</span>
+                <span class="ep-guest-title">Studio Hosts Roundtable</span>
+              </div>
+            </div>
+            <div class="ep-takeaways-box">
+              <div class="takeaway-bullet-sm">
+                <span class="dot"></span> How premature problem-solving is the listener's nervous system fleeing anxiety.
+              </div>
+              <div class="takeaway-bullet-sm">
+                <span class="dot"></span> Somatic holding: staying physically grounded while someone weeps.
+              </div>
+            </div>
+            <div class="ep-card-footer">
+              <button class="cospace-pill-btn cospace-pill-btn-primary ep-play-btn" data-play-ep="108">
+                <span class="play-icon-state">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+                </span>
+                <span>Listen (44m)</span>
+              </button>
+              <a href="https://open.spotify.com" target="_blank" rel="noopener" class="ep-sub-link">Spotify</a>
+              <a href="https://podcasts.apple.com" target="_blank" rel="noopener" class="ep-sub-link">Apple</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Ep 107 -->
+        <article class="episode-card-item" data-category="Relationships">
+          <div class="ep-card-media-banner">
+            <img src="/assets/card_01_arch.jpg" alt="Unspoken Grief in Family Estrangement" class="ep-cover-thumb" loading="lazy">
+            <div class="ep-media-badges">
+              <span class="ep-media-badge-tag">RELATIONAL SYSTEMS</span>
+              <span class="ep-media-badge-dur">51 min</span>
+            </div>
+          </div>
+          <div class="ep-card-body">
+            <div class="ep-card-header">
+              <span class="ep-num-badge">EP #107</span>
+              <span class="ep-category-pill">Relationships</span>
+              <span class="ep-duration">SEP 2026</span>
+            </div>
+            <h2 class="ep-card-title">Unspoken Grief in Family Estrangement: Mourning Those Who Are Still Living</h2>
+            <p class="ep-card-desc">
+              Dr. Elena Rostova joins to break down ambiguous loss within family cutoffs, navigating holiday rituals in absentia, and disentangling guilt from healthy self-protection.
+            </p>
+            <div class="ep-card-guest-row">
+              <img src="/assets/card_02_aura.jpg" alt="Dr. Elena Rostova" class="ep-guest-avatar">
+              <div class="ep-guest-info">
+                <span class="ep-card-guest">Dr. Elena Rostova</span>
+                <span class="ep-guest-title">Family Systems Psychologist</span>
+              </div>
+            </div>
+            <div class="ep-takeaways-box">
+              <div class="takeaway-bullet-sm">
+                <span class="dot"></span> Ambiguous loss does not follow the standard Kübler-Ross grief stages.
+              </div>
+              <div class="takeaway-bullet-sm">
+                <span class="dot"></span> Writing a "Boundaries Contract" before holiday family gatherings.
+              </div>
+            </div>
+            <div class="ep-card-footer">
+              <button class="cospace-pill-btn cospace-pill-btn-primary ep-play-btn" data-play-ep="107">
+                <span class="play-icon-state">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+                </span>
+                <span>Listen (51m)</span>
+              </button>
+              <a href="https://open.spotify.com" target="_blank" rel="noopener" class="ep-sub-link">Spotify</a>
+              <a href="https://podcasts.apple.com" target="_blank" rel="noopener" class="ep-sub-link">Apple</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Ep 106 -->
+        <article class="episode-card-item" data-category="Grief">
+          <div class="ep-card-media-banner">
+            <img src="/assets/card_05_bw.jpg" alt="Men, Mourning, and the Myth of Stoic Strength" class="ep-cover-thumb" loading="lazy">
+            <div class="ep-media-badges">
+              <span class="ep-media-badge-tag">BEREAVEMENT</span>
+              <span class="ep-media-badge-dur">56 min</span>
+            </div>
+          </div>
+          <div class="ep-card-body">
+            <div class="ep-card-header">
+              <span class="ep-num-badge">EP #106</span>
+              <span class="ep-category-pill">Grief & Bereavement</span>
+              <span class="ep-duration">AUG 2026</span>
+            </div>
+            <h2 class="ep-card-title">Men, Mourning, and the Myth of Stoic Strength</h2>
+            <p class="ep-card-desc">
+              Author Samuel Osei speaks candidly on losing his teenage son, unlearning childhood emotional conditioning, and finding brotherhood in vulnerability.
+            </p>
+            <div class="ep-card-guest-row">
+              <img src="/assets/card_05_bw.jpg" alt="Samuel Osei" class="ep-guest-avatar">
+              <div class="ep-guest-info">
+                <span class="ep-card-guest">Samuel Osei</span>
+                <span class="ep-guest-title">Author & Bereavement Advocate</span>
+              </div>
+            </div>
+            <div class="ep-takeaways-box">
+              <div class="takeaway-bullet-sm">
+                <span class="dot"></span> Why male depression frequently masquerades as irritability and isolation.
+              </div>
+              <div class="takeaway-bullet-sm">
+                <span class="dot"></span> How grief rituals can create space for communal tears without shame.
+              </div>
+            </div>
+            <div class="ep-card-footer">
+              <button class="cospace-pill-btn cospace-pill-btn-primary ep-play-btn" data-play-ep="106">
+                <span class="play-icon-state">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+                </span>
+                <span>Listen (56m)</span>
+              </button>
+              <a href="https://open.spotify.com" target="_blank" rel="noopener" class="ep-sub-link">Spotify</a>
+              <a href="https://podcasts.apple.com" target="_blank" rel="noopener" class="ep-sub-link">Apple</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Ep 105 -->
+        <article class="episode-card-item" data-category="Relationships">
+          <div class="ep-card-media-banner">
+            <img src="/assets/fig_02_model.jpg" alt="Navigating Sibling Estrangement" class="ep-cover-thumb" loading="lazy">
+            <div class="ep-media-badges">
+              <span class="ep-media-badge-tag">FAMILY REPAIR</span>
+              <span class="ep-media-badge-dur">47 min</span>
+            </div>
+          </div>
+          <div class="ep-card-body">
+            <div class="ep-card-header">
+              <span class="ep-num-badge">EP #105</span>
+              <span class="ep-category-pill">Relationships</span>
+              <span class="ep-duration">AUG 2026</span>
+            </div>
+            <h2 class="ep-card-title">Navigating Sibling Estrangement: The Childhood Ghosts in the Room</h2>
+            <p class="ep-card-desc">
+              How family roles assigned in childhood linger into our forties, and the brave conversations required to see an estranged sibling as they are today.
+            </p>
+            <div class="ep-card-guest-row">
+              <img src="/assets/fig_02_model.jpg" alt="Marcus Vance" class="ep-guest-avatar">
+              <div class="ep-guest-info">
+                <span class="ep-card-guest">Marcus Vance, LMFT</span>
+                <span class="ep-guest-title">Clinical Lead</span>
+              </div>
+            </div>
+            <div class="ep-takeaways-box">
+              <div class="takeaway-bullet-sm">
+                <span class="dot"></span> Family scapegoating vs. family hero syndromes.
+              </div>
+              <div class="takeaway-bullet-sm">
+                <span class="dot"></span> The protocol for reaching out after five years of silent separation.
+              </div>
+            </div>
+            <div class="ep-card-footer">
+              <button class="cospace-pill-btn cospace-pill-btn-primary ep-play-btn" data-play-ep="105">
+                <span class="play-icon-state">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+                </span>
+                <span>Listen (47m)</span>
+              </button>
+              <a href="https://open.spotify.com" target="_blank" rel="noopener" class="ep-sub-link">Spotify</a>
+              <a href="https://podcasts.apple.com" target="_blank" rel="noopener" class="ep-sub-link">Apple</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Ep 104 -->
+        <article class="episode-card-item" data-category="Career">
+          <div class="ep-card-media-banner">
+            <img src="/assets/card_04_zine.jpg" alt="De-coupling Identity From Output" class="ep-cover-thumb" loading="lazy">
+            <div class="ep-media-badges">
+              <span class="ep-media-badge-tag">CAREER & REST</span>
+              <span class="ep-media-badge-dur">42 min</span>
+            </div>
+          </div>
+          <div class="ep-card-body">
+            <div class="ep-card-header">
+              <span class="ep-num-badge">EP #104</span>
+              <span class="ep-category-pill">Career & Rest</span>
+              <span class="ep-duration">JUL 2026</span>
+            </div>
+            <h2 class="ep-card-title">De-coupling Identity From Output: The Slow Architecture of Real Rest</h2>
+            <p class="ep-card-desc">
+              Why high-achieving professionals feel sheer panic when unbusy, and how to reclaim hobbies that will never be monetized.
+            </p>
+            <div class="ep-card-guest-row">
+              <img src="/assets/card_04_zine.jpg" alt="Carlos Vega" class="ep-guest-avatar">
+              <div class="ep-guest-info">
+                <span class="ep-card-guest">Carlos Vega</span>
+                <span class="ep-guest-title">Somatic Career Strategist</span>
+              </div>
+            </div>
+            <div class="ep-takeaways-box">
+              <div class="takeaway-bullet-sm">
+                <span class="dot"></span> Internalized capitalism: why relaxation triggers adrenaline spikes.
+              </div>
+              <div class="takeaway-bullet-sm">
+                <span class="dot"></span> The "Non-Productive Sunday" protocol.
+              </div>
+            </div>
+            <div class="ep-card-footer">
+              <button class="cospace-pill-btn cospace-pill-btn-primary ep-play-btn" data-play-ep="104">
+                <span class="play-icon-state">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+                </span>
+                <span>Listen (42m)</span>
+              </button>
+              <a href="https://open.spotify.com" target="_blank" rel="noopener" class="ep-sub-link">Spotify</a>
+              <a href="https://podcasts.apple.com" target="_blank" rel="noopener" class="ep-sub-link">Apple</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Ep 103 -->
+        <article class="episode-card-item" data-category="Identity">
+          <div class="ep-card-media-banner">
+            <img src="/assets/card_03_cutout.jpg" alt="Late-in-Life Neurodivergence" class="ep-cover-thumb" loading="lazy">
+            <div class="ep-media-badges">
+              <span class="ep-media-badge-tag">IDENTITY & UNMASKING</span>
+              <span class="ep-media-badge-dur">50 min</span>
+            </div>
+          </div>
+          <div class="ep-card-body">
+            <div class="ep-card-header">
+              <span class="ep-num-badge">EP #103</span>
+              <span class="ep-category-pill">Identity</span>
+              <span class="ep-duration">JUL 2026</span>
+            </div>
+            <h2 class="ep-card-title">Late-in-Life Neurodivergence: Mourning the Person You Pretended to Be</h2>
+            <p class="ep-card-desc">
+              Navigating an ADHD or autism diagnosis in your thirties or forties, unmasking in intimate relationships, and re-narrating childhood memories through a lens of compassion.
+            </p>
+            <div class="ep-card-guest-row">
+              <img src="/assets/hero_scroll_editorial.jpg" alt="Dr. Leanne Thorne" class="ep-guest-avatar">
+              <div class="ep-guest-info">
+                <span class="ep-card-guest">Dr. Leanne Thorne</span>
+                <span class="ep-guest-title">Neurodivergent Clinician</span>
+              </div>
+            </div>
+            <div class="ep-takeaways-box">
+              <div class="takeaway-bullet-sm">
+                <span class="dot"></span> Autistic burnout vs. neurotypical depression: crucial differences.
+              </div>
+              <div class="takeaway-bullet-sm">
+                <span class="dot"></span> Designing a sensory sanctuary bedroom that actually restores you.
+              </div>
+            </div>
+            <div class="ep-card-footer">
+              <button class="cospace-pill-btn cospace-pill-btn-primary ep-play-btn" data-play-ep="103">
+                <span class="play-icon-state">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+                </span>
+                <span>Listen (50m)</span>
+              </button>
+              <a href="https://open.spotify.com" target="_blank" rel="noopener" class="ep-sub-link">Spotify</a>
+              <a href="https://podcasts.apple.com" target="_blank" rel="noopener" class="ep-sub-link">Apple</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Ep 102 -->
+        <article class="episode-card-item" data-category="Mental Health">
+          <div class="ep-card-media-banner">
+            <img src="/assets/card_02_aura.jpg" alt="The Courage to Disappoint" class="ep-cover-thumb" loading="lazy">
+            <div class="ep-media-badges">
+              <span class="ep-media-badge-tag">SOMATIC BOUNDARIES</span>
+              <span class="ep-media-badge-dur">46 min</span>
+            </div>
+          </div>
+          <div class="ep-card-body">
+            <div class="ep-card-header">
+              <span class="ep-num-badge">EP #102</span>
+              <span class="ep-category-pill">Mental Health</span>
+              <span class="ep-duration">JUN 2026</span>
+            </div>
+            <h2 class="ep-card-title">The Courage to Disappoint: Breaking the Addiction to Chronic Fawning</h2>
+            <p class="ep-card-desc">
+              Understanding the trauma response of fawning. Why saying yes when your body screams no is an involuntary survival mechanism, and how to retrain your nervous system to tolerate someone else's displeasure.
+            </p>
+            <div class="ep-card-guest-row">
+              <img src="/assets/card_01_arch.jpg" alt="Maya Lin" class="ep-guest-avatar">
+              <div class="ep-guest-info">
+                <span class="ep-card-guest">Maya Lin</span>
+                <span class="ep-guest-title">Producer & Host</span>
+              </div>
+            </div>
+            <div class="ep-takeaways-box">
+              <div class="takeaway-bullet-sm">
+                <span class="dot"></span> Pete Walker’s 4F trauma framework (Fight, Flight, Freeze, Fawn).
+              </div>
+              <div class="takeaway-bullet-sm">
+                <span class="dot"></span> Micro-boundary phrases that feel gentle yet unyielding.
+              </div>
+            </div>
+            <div class="ep-card-footer">
+              <button class="cospace-pill-btn cospace-pill-btn-primary ep-play-btn" data-play-ep="102">
+                <span class="play-icon-state">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+                </span>
+                <span>Listen (46m)</span>
+              </button>
+              <a href="https://open.spotify.com" target="_blank" rel="noopener" class="ep-sub-link">Spotify</a>
+              <a href="https://podcasts.apple.com" target="_blank" rel="noopener" class="ep-sub-link">Apple</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Ep 101 -->
+        <article class="episode-card-item" data-category="Mental Health">
+          <div class="ep-card-media-banner">
+            <img src="/assets/hero_editorial_model.jpg" alt="The Foundation: Why We Started Care To Listen" class="ep-cover-thumb" loading="lazy">
+            <div class="ep-media-badges">
+              <span class="ep-media-badge-tag">FOUNDING MANIFESTO</span>
+              <span class="ep-media-badge-dur">39 min</span>
+            </div>
+          </div>
+          <div class="ep-card-body">
+            <div class="ep-card-header">
+              <span class="ep-num-badge">EP #101</span>
+              <span class="ep-category-pill">Mental Health</span>
+              <span class="ep-duration">JUN 2026</span>
+            </div>
+            <h2 class="ep-card-title">The Foundation: Why We Started Care To Listen</h2>
+            <p class="ep-card-desc">
+              The pilot episode. Maya and Marcus share the personal crises that brought them into the same studio booth, the four pillars of somatic listening, and a manifesto for an unhurried life.
+            </p>
+            <div class="ep-card-guest-row">
+              <img src="/assets/hero_editorial_model.jpg" alt="Maya & Marcus" class="ep-guest-avatar">
+              <div class="ep-guest-info">
+                <span class="ep-card-guest">Maya Lin & Marcus Vance</span>
+                <span class="ep-guest-title">Founding Manifesto</span>
+              </div>
+            </div>
+            <div class="ep-takeaways-box">
+              <div class="takeaway-bullet-sm">
+                <span class="dot"></span> How modern social media accelerates nervous system dysregulation.
+              </div>
+              <div class="takeaway-bullet-sm">
+                <span class="dot"></span> The Sanctuary Pledge: zero ads for predatory mental health apps.
+              </div>
+            </div>
+            <div class="ep-card-footer">
+              <button class="cospace-pill-btn cospace-pill-btn-primary ep-play-btn" data-play-ep="101">
+                <span class="play-icon-state">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+                </span>
+                <span>Listen (39m)</span>
+              </button>
+              <a href="https://open.spotify.com" target="_blank" rel="noopener" class="ep-sub-link">Spotify</a>
+              <a href="https://podcasts.apple.com" target="_blank" rel="noopener" class="ep-sub-link">Apple</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- PITCH CALLOUT -->
+    <section class="section-container">
+      <div class="cospace-callout-card">
+        <div class="callout-inner">
+          <span class="section-badge">COMMUNITY CO-CREATION</span>
+          <h3 class="callout-title">Have a story or clinical insight that belongs here?</h3>
+          <p class="callout-desc">
+            We review listener pitches and guest nominations every Friday afternoon. If you or someone you know has walked through fire and discovered a quiet wisdom, reach out.
+          </p>
+          <div class="callout-actions">
+            <a href="/request-episode.html" class="cospace-pill-btn cospace-pill-btn-primary">
+              <span>Pitch an Episode Topic</span>
+            </a>
+            <a href="/become-a-guest.html" class="cospace-pill-btn cospace-pill-btn-outline">
+              <span>Apply for Guest Casting</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MASTER FOOTER -->
+  <footer class="cospace-footer-wrapper">
+    <div class="cospace-footer-container">
+      <div class="footer-hero-brand">
+        <span class="footer-giant-text">CareToListen<span class="footer-asterisk">*</span></span>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-col-about">
+          <p class="footer-tagline">
+            An independent, listener-supported audio sanctuary produced in Seattle & Minneapolis. Dedicated to the radical premise that listening is an act of love.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Episodes</h4>
+          <ul class="footer-links">
+            <li><a href="/episodes.html">Latest Broadcasts</a></li>
+            <li><a href="/episodes.html?category=Mental+Health">Mental Health</a></li>
+            <li><a href="/episodes.html?category=Grief">Grief & Bereavement</a></li>
+            <li><a href="/videos.html">4K Soundstage</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="/hosts.html">Meet The Hosts</a></li>
+            <li><a href="/guests.html">Guest Directory</a></li>
+            <li><a href="/about.html">About & Ethos</a></li>
+            <li><a href="/mission.html">Our 4 Pillars</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Care & Support</h4>
+          <ul class="footer-links">
+            <li><a href="/resources.html">24/7 Crisis Directory</a></li>
+            <li><a href="tel:988">988 Suicide & Crisis Lifeline</a></li>
+            <li><a href="/admin.html">Studio CMS (Staff)</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        <p class="footer-copy">&copy; 2026 Care To Listen Media Collective.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING AUDIO PLAYER PILL DOCK -->
+  <div id="floating-audio-dock" class="cospace-audio-dock" role="region" aria-label="Persistent Audio Player">
+    <div class="dock-inner">
+      <div class="dock-left">
+        <img id="player-track-thumb" src="/assets/hero_meaningful_listening.jpg" alt="Episode Thumbnail" class="dock-thumb">
+        <div class="dock-meta">
+          <div class="dock-eyebrow">
+            <span id="player-track-ep" class="dock-ep-tag">EP #108</span>
+            <div id="player-eq-bars" class="eq-bars">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+          <span id="player-track-title" class="dock-title">Learning to Sit With the Silence</span>
+          <span id="player-track-guest" class="dock-guest">with Maya Lin & Marcus Vance</span>
+        </div>
+      </div>
+      <div class="dock-center">
+        <div class="dock-controls">
+          <button id="player-play-btn" class="dock-play-circle" aria-label="Play or pause audio">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+          </button>
+        </div>
+        <div class="dock-scrubber-wrap">
+          <span id="player-time-current" class="dock-time">00:00</span>
+          <div id="player-progress-bar" class="dock-progress-track">
+            <div id="player-progress-fill" class="dock-progress-fill"></div>
+          </div>
+          <span id="player-time-total" class="dock-time">44:18</span>
+        </div>
+      </div>
+      <div class="dock-right">
+        <div class="dock-vol-group">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+          <input id="player-volume-slider" type="range" min="0" max="1" step="0.05" value="0.8" class="dock-volume" aria-label="Audio Volume">
+        </div>
+        <button id="player-toggle-btn" class="dock-close-pill" aria-label="Minimize player">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

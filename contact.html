@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Correspondence — Care To Listen Podcast</title>
+  <meta name="description" content="Send a studio letter, press inquiry, or clinical reflection to Maya Lin and Marcus Vance.">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+
+  <!-- Floating Header -->
+  <header class="cospace-header-wrap">
+    <nav class="cospace-nav-pill" aria-label="Main Navigation">
+      <a href="/" class="cospace-brand">
+        <span class="brand-dot"></span>
+        CareToListen<span class="brand-asterisk">*</span>
+      </a>
+
+      <div class="cospace-nav-links">
+        <a href="/episodes.html" class="nav-link">Episodes</a>
+        <a href="/hosts.html" class="nav-link">Hosts</a>
+        <a href="/guests.html" class="nav-link">Guests</a>
+        <a href="/videos.html" class="nav-link">Videos</a>
+        <a href="/about.html" class="nav-link">About</a>
+        <a href="/resources.html" class="nav-link">Crisis Resources</a>
+        <a href="/admin.html" class="nav-link nav-link-admin">Admin</a>
+      </div>
+
+      <div class="cospace-nav-actions">
+        <button class="cospace-pill-btn cospace-pill-btn-primary" data-play-ep="108">
+          <span class="play-icon-state">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+          </span>
+          <span>Listen Now</span>
+        </button>
+        <button id="mobile-menu-btn" class="cospace-mobile-toggle" aria-label="Open navigation menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <aside id="mobile-nav-drawer" class="mobile-drawer">
+    <div class="drawer-header">
+      <span class="cospace-brand">CareToListen<span class="brand-asterisk">*</span></span>
+      <button id="mobile-close-btn" class="drawer-close">&times;</button>
+    </div>
+    <div class="drawer-links">
+      <a href="/episodes.html">All Episodes</a>
+      <a href="/hosts.html">Meet The Hosts</a>
+      <a href="/guests.html">Studio Guests</a>
+      <a href="/videos.html">4K Soundstage</a>
+      <a href="/about.html">Our Ethos & Story</a>
+      <a href="/mission.html">4 Somatic Pillars</a>
+      <a href="/resources.html">24/7 Crisis Directory</a>
+      <a href="/request-episode.html">Pitch an Episode</a>
+      <a href="/become-a-guest.html">Guest Casting</a>
+      <a href="/contact.html" class="active">Studio Inquiries</a>
+      <a href="/admin.html">Staff Studio CMS</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- PAGE HERO -->
+    <section class="section-container page-header-section">
+      <div class="page-header-wrap">
+        <div class="page-kicker">
+          <span class="kicker-pill">OPEN DESK</span>
+          <span class="kicker-sub">Correspondence</span>
+        </div>
+        <h1 class="page-title">Write to the Studio</h1>
+        <p class="page-lead">
+          Whether you want to share how a broadcast impacted your healing journey, propose a research partnership, or book Maya or Marcus for a keynote, our team reads every note.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT GRID -->
+    <section class="section-container">
+      <div class="contact-split-grid">
+        <!-- Studio Info Col -->
+        <div class="contact-info-col">
+          <div class="contact-card-box">
+            <h3 class="contact-heading">Physical Recording Desks</h3>
+            <div class="contact-loc-item">
+              <span class="loc-badge">STUDIO A • BROADCAST</span>
+              <p class="loc-name">Care To Listen Soundstage</p>
+              <p class="loc-address">Ballard Harbor District, Seattle, WA</p>
+            </div>
+            <div class="contact-loc-item">
+              <span class="loc-badge">STUDIO B • EDITORIAL</span>
+              <p class="loc-name">Writing & Clinical Research Lab</p>
+              <p class="loc-address">North Loop, Minneapolis, MN</p>
+            </div>
+          </div>
+
+          <div class="contact-card-box">
+            <h3 class="contact-heading">Direct Departments</h3>
+            <p class="dept-line"><strong>Listener Letters:</strong> letters@care2listen.org</p>
+            <p class="dept-line"><strong>Production & Casting:</strong> production@care2listen.org</p>
+            <p class="dept-line"><strong>Press & Keynotes:</strong> press@care2listen.org</p>
+          </div>
+        </div>
+
+        <!-- Form Col -->
+        <div class="contact-form-col">
+          <div class="form-wrapper-card">
+            <form data-cospace-form class="cospace-full-form">
+              <div class="form-group">
+                <label class="form-label" for="contact-name">Your Name</label>
+                <input type="text" id="contact-name" required placeholder="Jane Doe" class="cospace-input">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Email Address</label>
+                <input type="email" id="contact-email" required placeholder="jane@example.com" class="cospace-input">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-dept">Topic / Department</label>
+                <select id="contact-dept" class="cospace-select">
+                  <option value="letter">Personal Note to Maya & Marcus</option>
+                  <option value="press">Press & Media Inquiry</option>
+                  <option value="speaking">Keynote / Workshop Booking</option>
+                  <option value="licensing">Educational Audio Licensing</option>
+                  <option value="other">General Studio Question</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-msg">Your Message</label>
+                <textarea id="contact-msg" rows="5" required placeholder="Write your letter here..." class="cospace-textarea"></textarea>
+              </div>
+
+              <div class="form-submit-row">
+                <button type="submit" class="cospace-pill-btn cospace-pill-btn-primary form-submit-btn">
+                  <span>Send Studio Letter</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MASTER FOOTER -->
+  <footer class="cospace-footer-wrapper">
+    <div class="cospace-footer-container">
+      <div class="footer-hero-brand">
+        <span class="footer-giant-text">CareToListen<span class="footer-asterisk">*</span></span>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-col-about">
+          <p class="footer-tagline">
+            An independent, listener-supported audio sanctuary produced in Seattle & Minneapolis.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Episodes</h4>
+          <ul class="footer-links">
+            <li><a href="/episodes.html">Latest Broadcasts</a></li>
+            <li><a href="/episodes.html?category=Mental+Health">Mental Health</a></li>
+            <li><a href="/episodes.html?category=Grief">Grief & Bereavement</a></li>
+            <li><a href="/videos.html">4K Soundstage</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="/hosts.html">Meet The Hosts</a></li>
+            <li><a href="/guests.html">Guest Directory</a></li>
+            <li><a href="/about.html">About & Ethos</a></li>
+            <li><a href="/mission.html">Our 4 Pillars</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Care & Support</h4>
+          <ul class="footer-links">
+            <li><a href="/resources.html">24/7 Crisis Directory</a></li>
+            <li><a href="tel:988">988 Suicide & Crisis Lifeline</a></li>
+            <li><a href="/admin.html">Studio CMS (Staff)</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        <p class="footer-copy">&copy; 2026 Care To Listen Media Collective.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING AUDIO PLAYER PILL DOCK -->
+  <div id="floating-audio-dock" class="cospace-audio-dock" role="region" aria-label="Persistent Audio Player">
+    <div class="dock-inner">
+      <div class="dock-left">
+        <img id="player-track-thumb" src="/assets/hero_meaningful_listening.jpg" alt="Episode Thumbnail" class="dock-thumb">
+        <div class="dock-meta">
+          <div class="dock-eyebrow">
+            <span id="player-track-ep" class="dock-ep-tag">EP #108</span>
+            <div id="player-eq-bars" class="eq-bars">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+          <span id="player-track-title" class="dock-title">Learning to Sit With the Silence</span>
+          <span id="player-track-guest" class="dock-guest">with Maya Lin & Marcus Vance</span>
+        </div>
+      </div>
+      <div class="dock-center">
+        <div class="dock-controls">
+          <button id="player-play-btn" class="dock-play-circle" aria-label="Play or pause audio">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+          </button>
+        </div>
+        <div class="dock-scrubber-wrap">
+          <span id="player-time-current" class="dock-time">00:00</span>
+          <div id="player-progress-bar" class="dock-progress-track">
+            <div id="player-progress-fill" class="dock-progress-fill"></div>
+          </div>
+          <span id="player-time-total" class="dock-time">44:18</span>
+        </div>
+      </div>
+      <div class="dock-right">
+        <div class="dock-vol-group">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+          <input id="player-volume-slider" type="range" min="0" max="1" step="0.05" value="0.8" class="dock-volume" aria-label="Audio Volume">
+        </div>
+        <button id="player-toggle-btn" class="dock-close-pill" aria-label="Minimize player">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

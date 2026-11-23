@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff Studio CMS & Approvals — Care To Listen</title>
+  <meta name="description" content="Care To Listen Staff Production Dashboard: Episode publishing, guest pitch approval queue, and studio telemetry.">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+
+  <!-- Floating Header -->
+  <header class="cospace-header-wrap">
+    <nav class="cospace-nav-pill" aria-label="Main Navigation">
+      <a href="/" class="cospace-brand">
+        <span class="brand-dot"></span>
+        CareToListen<span class="brand-asterisk">*</span>
+      </a>
+
+      <div class="cospace-nav-links">
+        <a href="/episodes.html" class="nav-link">Episodes</a>
+        <a href="/hosts.html" class="nav-link">Hosts</a>
+        <a href="/guests.html" class="nav-link">Guests</a>
+        <a href="/videos.html" class="nav-link">Videos</a>
+        <a href="/about.html" class="nav-link">About</a>
+        <a href="/resources.html" class="nav-link">Crisis Resources</a>
+        <a href="/admin.html" class="nav-link nav-link-admin active">Admin</a>
+      </div>
+
+      <div class="cospace-nav-actions">
+        <a href="/" class="cospace-pill-btn cospace-pill-btn-outline">
+          <span>&larr; Public Site</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="admin-main-wrap">
+    <!-- LOCK GATE (Shown if not logged in) -->
+    <section id="admin-gate-section" class="section-container admin-gate-container">
+      <div class="admin-login-card">
+        <div class="login-badge-wrap">
+          <span class="kicker-pill">STAFF AUTHENTICATION</span>
+        </div>
+        <h1 class="login-title">Studio Console</h1>
+        <p class="login-desc">Enter your production passkey to access episode publishing, approval queues, and show notes.</p>
+        
+        <form id="admin-login-form" class="admin-login-form">
+          <div class="form-group">
+            <label class="form-label" for="passkey-input">Studio Passkey</label>
+            <input type="password" id="passkey-input" placeholder="Enter passkey (hint: sanctuary2026)" required class="cospace-input">
+          </div>
+          <button type="submit" class="cospace-pill-btn cospace-pill-btn-primary admin-btn-full">
+            <span>Unlock Studio Console &rarr;</span>
+          </button>
+          <p id="login-error-msg" class="login-error-note" style="display: none;">Invalid passkey. Try <strong>sanctuary2026</strong></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- DASHBOARD VIEW (Shown once unlocked) -->
+    <section id="admin-dashboard-section" class="section-container admin-dashboard-container" style="display: none;">
+      
+      <!-- Top Bar -->
+      <div class="admin-topbar">
+        <div>
+          <span class="kicker-pill">STAFF DESK ACTIVE</span>
+          <h1 class="admin-page-title">Production Desk</h1>
+        </div>
+        <div class="admin-top-actions">
+          <button id="open-new-ep-btn" class="cospace-pill-btn cospace-pill-btn-primary">
+            <span>+ Publish New Episode</span>
+          </button>
+          <button id="admin-lock-btn" class="cospace-pill-btn cospace-pill-btn-outline">
+            <span>Lock Console</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Telemetry Cards -->
+      <div class="admin-stats-row">
+        <div class="admin-stat-card">
+          <span class="stat-num">109</span>
+          <span class="stat-label">Published Broadcasts</span>
+        </div>
+        <div class="admin-stat-card admin-stat-lime">
+          <span class="stat-num" id="pending-count-badge">3</span>
+          <span class="stat-label">Pending Pitches</span>
+        </div>
+        <div class="admin-stat-card">
+          <span class="stat-num">1.4M</span>
+          <span class="stat-label">Sanctuary Streams</span>
+        </div>
+        <div class="admin-stat-card admin-stat-coral">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">Ad-Free Listener Funded</span>
+        </div>
+      </div>
+
+      <!-- PUBLISH MODAL / COLLAPSIBLE INLINE DRAWER -->
+      <div id="new-ep-drawer" class="admin-collapsible-drawer" style="display: none;">
+        <div class="drawer-inner-card">
+          <div class="drawer-header-row">
+            <div>
+              <span class="kicker-pill">NEW BROADCAST</span>
+              <h2 class="drawer-title">Publish Episode to RSS & Catalog</h2>
+            </div>
+            <button id="close-new-ep-btn" class="drawer-close-btn" aria-label="Close dialog">&times;</button>
+          </div>
+
+          <form id="publish-episode-form" class="cospace-full-form">
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label" for="new-ep-num">Episode Number</label>
+                <input type="text" id="new-ep-num" required value="110" class="cospace-input">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="new-ep-cat">Category</label>
+                <select id="new-ep-cat" class="cospace-select">
+                  <option value="Mental Health">Mental Health & Somatics</option>
+                  <option value="Neuroscience">Neuroscience</option>
+                  <option value="Grief">Grief & Bereavement</option>
+                  <option value="Relationships">Relational Repair</option>
+                  <option value="Identity">Identity & Neurodivergence</option>
+                  <option value="Career">Career & Rest</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="new-ep-title">Episode Title</label>
+              <input type="text" id="new-ep-title" required placeholder="e.g. Somatic Integration After Sudden Shock" class="cospace-input">
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label" for="new-ep-guest">Guest Name & Credentials</label>
+                <input type="text" id="new-ep-guest" required placeholder="e.g. Dr. Maya Angelou or Dr. Kenji Sato" class="cospace-input">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="new-ep-duration">Duration</label>
+                <input type="text" id="new-ep-duration" required value="48 min" class="cospace-input">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="new-ep-summary">Summary & Narrative Arc</label>
+              <textarea id="new-ep-summary" rows="4" required placeholder="A brief, grounded description of what Maya, Marcus, and the guest explore..." class="cospace-textarea"></textarea>
+            </div>
+
+            <div class="form-submit-row">
+              <button type="submit" class="cospace-pill-btn cospace-pill-btn-primary">
+                <span>Publish Episode Broadcast</span>
+              </button>
+              <button type="button" id="cancel-publish-btn" class="cospace-pill-btn cospace-pill-btn-outline">
+                <span>Cancel</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- APPROVAL SYSTEM QUEUE (Requested by user) -->
+      <div class="admin-section-block">
+        <div class="admin-block-header">
+          <div>
+            <span class="section-badge">CURATION DESK</span>
+            <h2 class="admin-block-title">Listener & Guest Pitch Approvals</h2>
+            <p class="admin-block-desc">Review proposals submitted through public pitch forms. Approve to send to studio calendar or decline respectfully.</p>
+          </div>
+        </div>
+
+        <div id="approvals-queue-list" class="approvals-list">
+
+          <!-- Proposal 1 -->
+          <article class="approval-card" id="prop-1">
+            <div class="approval-card-top">
+              <span class="approval-tag">GUEST CASTING</span>
+              <span class="approval-date">Submitted Oct 18, 2026</span>
+              <span class="approval-status-badge status-pending">Pending Review</span>
+            </div>
+            <h3 class="approval-title">Navigating Dementia & Ambiguous Loss as an Only Child</h3>
+            <p class="approval-proposer">Proposed by <strong>Hannah Wright, MSW</strong> (Palliative Social Worker)</p>
+            <p class="approval-excerpt">
+              “My mother was diagnosed with early-onset Alzheimer's at 58. As an only child, I spent three years mourning someone whose body was still right in front of me. I want to talk about how clinicians can support adult children trapped in chronic anticipatory grief without burning out.”
+            </p>
+            <div class="approval-actions">
+              <button class="cospace-pill-btn cospace-pill-btn-primary btn-approve" data-prop-id="prop-1">
+                <span>Approve & Schedule Session</span>
+              </button>
+              <button class="cospace-pill-btn cospace-pill-btn-outline btn-decline" data-prop-id="prop-1">
+                <span>Decline Gently</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Proposal 2 -->
+          <article class="approval-card" id="prop-2">
+            <div class="approval-card-top">
+              <span class="approval-tag">LISTENER TOPIC</span>
+              <span class="approval-date">Submitted Oct 17, 2026</span>
+              <span class="approval-status-badge status-pending">Pending Review</span>
+            </div>
+            <h3 class="approval-title">Breaking the Habit of Apologizing for Existing: Unlearning Chronic Fawning</h3>
+            <p class="approval-proposer">Proposed by <strong>David R.</strong> (Longtime Listener)</p>
+            <p class="approval-excerpt">
+              “I say 'sorry' fifty times a day even when people bump into me. Marcus touched on the fawning response in Ep #102, but I would love an entire deep-dive on somatic retraining for people whose nervous systems were conditioned in volatile households.”
+            </p>
+            <div class="approval-actions">
+              <button class="cospace-pill-btn cospace-pill-btn-primary btn-approve" data-prop-id="prop-2">
+                <span>Approve & Schedule Session</span>
+              </button>
+              <button class="cospace-pill-btn cospace-pill-btn-outline btn-decline" data-prop-id="prop-2">
+                <span>Decline Gently</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Proposal 3 -->
+          <article class="approval-card" id="prop-3">
+            <div class="approval-card-top">
+              <span class="approval-tag">GUEST CASTING</span>
+              <span class="approval-date">Submitted Oct 15, 2026</span>
+              <span class="approval-status-badge status-pending">Pending Review</span>
+            </div>
+            <h3 class="approval-title">High-Functioning Dissociation Among Emergency Medicine Doctors</h3>
+            <p class="approval-proposer">Proposed by <strong>Dr. Tariq Al-Mansoor, MD</strong> (Attending Trauma Surgeon)</p>
+            <p class="approval-excerpt">
+              “We are trained to disconnect our emotional brains to keep pediatric gunshot victims alive. But when the shift ends, that dissociation doesn't switch off. I want to discuss how medical education systematically destroys clinician empathy.”
+            </p>
+            <div class="approval-actions">
+              <button class="cospace-pill-btn cospace-pill-btn-primary btn-approve" data-prop-id="prop-3">
+                <span>Approve & Schedule Session</span>
+              </button>
+              <button class="cospace-pill-btn cospace-pill-btn-outline btn-decline" data-prop-id="prop-3">
+                <span>Decline Gently</span>
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- ACTIVE EPISODES MANAGEMENT LIST -->
+      <div class="admin-section-block">
+        <div class="admin-block-header">
+          <div>
+            <span class="section-badge">CATALOG INVENTORY</span>
+            <h2 class="admin-block-title">Active Broadcast Records</h2>
+          </div>
+        </div>
+
+        <div class="admin-table-wrap">
+          <table class="admin-ep-table">
+            <thead>
+              <tr>
+                <th>EP #</th>
+                <th>Title & Guest</th>
+                <th>Category</th>
+                <th>Runtime</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="admin-table-body">
+              <tr>
+                <td><strong>109</strong></td>
+                <td>
+                  <strong>The Neurobiology of Compassion Fatigue</strong><br>
+                  <span class="table-sub">with Dr. Kenji Sato</span>
+                </td>
+                <td><span class="table-cat-pill">Neuroscience</span></td>
+                <td>48 min</td>
+                <td><span class="status-live">Live On Air</span></td>
+                <td>
+                  <button class="table-action-btn" onclick="alert('Episode 109 loaded for editing.')">Edit</button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>108</strong></td>
+                <td>
+                  <strong>Learning to Sit With the Silence</strong><br>
+                  <span class="table-sub">Maya Lin & Marcus Vance</span>
+                </td>
+                <td><span class="table-cat-pill">Mental Health</span></td>
+                <td>44 min</td>
+                <td><span class="status-live">Featured Pick</span></td>
+                <td>
+                  <button class="table-action-btn" onclick="alert('Episode 108 loaded for editing.')">Edit</button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>107</strong></td>
+                <td>
+                  <strong>Unspoken Grief in Family Estrangement</strong><br>
+                  <span class="table-sub">with Dr. Elena Rostova</span>
+                </td>
+                <td><span class="table-cat-pill">Relationships</span></td>
+                <td>51 min</td>
+                <td><span class="status-live">Live On Air</span></td>
+                <td>
+                  <button class="table-action-btn" onclick="alert('Episode 107 loaded for editing.')">Edit</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- MASTER FOOTER -->
+  <footer class="cospace-footer-wrapper">
+    <div class="cospace-footer-container">
+      <div class="footer-hero-brand">
+        <span class="footer-giant-text">CareToListen<span class="footer-asterisk">*</span></span>
+      </div>
+      <div class="footer-bottom-bar">
+        <p class="footer-copy">&copy; 2026 Care To Listen Media Collective — Staff Access Only.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Embedded lightweight script for admin passkey & approval interactions
+    document.addEventListener("DOMContentLoaded", () => {
+      const gateSection = document.getElementById("admin-gate-section");
+      const dashSection = document.getElementById("admin-dashboard-section");
+      const loginForm = document.getElementById("admin-login-form");
+      const passInput = document.getElementById("passkey-input");
+      const errorMsg = document.getElementById("login-error-msg");
+      const lockBtn = document.getElementById("admin-lock-btn");
+
+      // Check session
+      if (sessionStorage.getItem("care2listen_auth") === "true") {
+        gateSection.style.display = "none";
+        dashSection.style.display = "block";
+      }
+
+      loginForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const entered = (passInput.value || "").trim().toLowerCase();
+        if (entered === "sanctuary2026" || entered === "admin" || entered === "care2listen") {
+          sessionStorage.setItem("care2listen_auth", "true");
+          gateSection.style.display = "none";
+          dashSection.style.display = "block";
+          errorMsg.style.display = "none";
+        } else {
+          errorMsg.style.display = "block";
+        }
+      });
+
+      if (lockBtn) {
+        lockBtn.addEventListener("click", () => {
+          sessionStorage.removeItem("care2listen_auth");
+          dashSection.style.display = "none";
+          gateSection.style.display = "block";
+          passInput.value = "";
+        });
+      }
+
+      // Collapsible New Episode Drawer
+      const openEpBtn = document.getElementById("open-new-ep-btn");
+      const closeEpBtn = document.getElementById("close-new-ep-btn");
+      const cancelEpBtn = document.getElementById("cancel-publish-btn");
+      const epDrawer = document.getElementById("new-ep-drawer");
+      const publishForm = document.getElementById("publish-episode-form");
+
+      if (openEpBtn && epDrawer) {
+        openEpBtn.addEventListener("click", () => {
+          epDrawer.style.display = "block";
+          epDrawer.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      }
+
+      function hideDrawer() {
+        if (epDrawer) epDrawer.style.display = "none";
+      }
+
+      if (closeEpBtn) closeEpBtn.addEventListener("click", hideDrawer);
+      if (cancelEpBtn) cancelEpBtn.addEventListener("click", hideDrawer);
+
+      if (publishForm) {
+        publishForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const epNum = document.getElementById("new-ep-num").value;
+          const epTitle = document.getElementById("new-ep-title").value;
+          const epGuest = document.getElementById("new-ep-guest").value;
+          const epCat = document.getElementById("new-ep-cat").value;
+          const epDur = document.getElementById("new-ep-duration").value;
+
+          // Add to table
+          const tbody = document.getElementById("admin-table-body");
+          if (tbody) {
+            const tr = document.createElement("tr");
+            tr.innerHTML = `
+              <td><strong>${epNum}</strong></td>
+              <td>
+                <strong>${epTitle}</strong><br>
+                <span class="table-sub">with ${epGuest}</span>
+              </td>
+              <td><span class="table-cat-pill">${epCat}</span></td>
+              <td>${epDur}</td>
+              <td><span class="status-live">Just Published</span></td>
+              <td><button class="table-action-btn" onclick="alert('Loaded')">Edit</button></td>
+            `;
+            tbody.insertBefore(tr, tbody.firstChild);
+          }
+
+          alert(`Episode #${epNum} published successfully to Care To Listen catalog!`);
+          publishForm.reset();
+          hideDrawer();
+        });
+      }
+
+      // Approval Queue interactions
+      document.querySelectorAll(".btn-approve").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const propId = btn.getAttribute("data-prop-id");
+          const card = document.getElementById(propId);
+          if (card) {
+            card.style.borderColor = "var(--color-primary-lime)";
+            card.style.background = "#F9FCE8";
+            btn.innerHTML = "<span>Approved & Slated ✓</span>";
+            btn.disabled = true;
+            const declineBtn = card.querySelector(".btn-decline");
+            if (declineBtn) declineBtn.style.display = "none";
+            const badge = card.querySelector(".approval-status-badge");
+            if (badge) {
+              badge.textContent = "Approved For Recording";
+              badge.className = "approval-status-badge status-approved";
+            }
+          }
+        });
+      });
+
+      document.querySelectorAll(".btn-decline").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const propId = btn.getAttribute("data-prop-id");
+          const card = document.getElementById(propId);
+          if (card) {
+            card.style.opacity = "0.5";
+            btn.innerHTML = "<span>Declined With Care</span>";
+            btn.disabled = true;
+            const approveBtn = card.querySelector(".btn-approve");
+            if (approveBtn) approveBtn.style.display = "none";
+            const badge = card.querySelector(".approval-status-badge");
+            if (badge) {
+              badge.textContent = "Archived";
+              badge.className = "approval-status-badge status-declined";
+            }
+          }
+        });
+      });
+    });
+  </script>
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Care To Listen — Turn Heavy Silence Into Shared Healing</title>
+  <meta name="description" content="A trauma-informed sanctuary podcast hosted by Maya Lin & Marcus Vance. Deep, unhurried conversations about grief, somatic recovery, and relational repair.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%231C1917'/><circle cx='50' cy='50' r='18' fill='%23CFE84D'/></svg>">
+  <script type="module" crossorigin src="/assets/main-B-cDhH83.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-DZc7wk3V.css">
+</head>
+<body>
+
+  <!-- Floating CoSpace Pill Header -->
+  <header class="cospace-header-wrap">
+    <nav class="cospace-nav-pill" aria-label="Main Navigation">
+      <a href="/" class="cospace-brand">
+        <span class="brand-dot"></span>
+        CareToListen<span class="brand-asterisk">*</span>
+      </a>
+
+      <div class="cospace-nav-links">
+        <a href="/episodes.html" class="nav-link">Episodes</a>
+        <a href="/hosts.html" class="nav-link">Hosts</a>
+        <a href="/guests.html" class="nav-link">Guests</a>
+        <a href="/videos.html" class="nav-link">Videos</a>
+        <a href="/about.html" class="nav-link">About</a>
+        <a href="/resources.html" class="nav-link">Crisis Resources</a>
+        <a href="/admin.html" class="nav-link nav-link-admin">Admin</a>
+      </div>
+
+      <div class="cospace-nav-actions">
+        <button class="cospace-pill-btn cospace-pill-btn-primary" data-play-ep="108">
+          <span class="play-icon-state">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+          </span>
+          <span>Listen Now</span>
+        </button>
+        <button id="mobile-menu-btn" class="cospace-mobile-toggle" aria-label="Open navigation menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <aside id="mobile-nav-drawer" class="mobile-drawer">
+    <div class="drawer-header">
+      <span class="cospace-brand">CareToListen<span class="brand-asterisk">*</span></span>
+      <button id="mobile-close-btn" class="drawer-close" aria-label="Close menu">&times;</button>
+    </div>
+    <div class="drawer-links">
+      <a href="/episodes.html">All Episodes</a>
+      <a href="/hosts.html">Meet The Hosts</a>
+      <a href="/guests.html">Studio Guests</a>
+      <a href="/videos.html">4K Soundstage</a>
+      <a href="/about.html">Our Ethos & Story</a>
+      <a href="/mission.html">4 Somatic Pillars</a>
+      <a href="/resources.html">24/7 Crisis Directory</a>
+      <a href="/request-episode.html">Pitch an Episode</a>
+      <a href="/become-a-guest.html">Guest Casting</a>
+      <a href="/contact.html">Studio Inquiries</a>
+      <a href="/admin.html">Staff Studio CMS</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- HERO SECTION: Marquee Reel + Giant Headline -->
+    <section class="cospace-hero-section">
+      <!-- Continuous horizontal marquee card reel with feature images -->
+      <div class="hero-marquee-wrapper" aria-hidden="true">
+        <div class="marquee-track">
+          <!-- Card 1: Ep 109 (White) -->
+          <div class="marquee-card" data-play-ep="109">
+            <div class="marquee-card-media">
+              <img src="/assets/card_01_arch.jpg" alt="Episode 109" class="marquee-card-img" loading="lazy">
+              <span class="marquee-img-chip">EP #109</span>
+              <span class="marquee-play-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+              </span>
+            </div>
+            <div class="marquee-card-content">
+              <div class="marquee-card-meta">
+                <span class="marquee-tag">NEUROSCIENCE</span>
+                <span class="marquee-duration">48 min</span>
+              </div>
+              <p class="marquee-title">The Neurobiology of Compassion Fatigue</p>
+              <div class="marquee-guest-row">
+                <img src="/assets/card_01_arch.jpg" alt="Dr. Kenji Sato" class="marquee-guest-avatar">
+                <span class="marquee-guest">with Dr. Kenji Sato</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Somatic Wave (Lime) -->
+          <div class="marquee-card marquee-card-lime" data-play-ep="109">
+            <div class="marquee-card-media">
+              <img src="/assets/somatic_breath_wave.jpg" alt="Somatic Sanctuary" class="marquee-card-img" loading="lazy">
+              <span class="marquee-img-chip">SANCTUARY RESET</span>
+              <span class="marquee-play-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+              </span>
+            </div>
+            <div class="marquee-card-content">
+              <div class="marquee-card-meta">
+                <span class="marquee-tag">SOMATICS</span>
+                <span class="marquee-duration">90 Sec</span>
+              </div>
+              <p class="marquee-title">Nervous System Regulation & Sigh Protocol</p>
+              <div class="marquee-guest-row">
+                <img src="/assets/fig_02_model.jpg" alt="Somatic Guide" class="marquee-guest-avatar">
+                <span class="marquee-guest">Daily Physiological Vagal Reset</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Ep 108 Featured (White) -->
+          <div class="marquee-card" data-play-ep="108">
+            <div class="marquee-card-media">
+              <img src="/assets/hero_meaningful_listening.jpg" alt="Episode 108" class="marquee-card-img" loading="lazy">
+              <span class="marquee-img-chip">EP #108 • FEATURED</span>
+              <span class="marquee-play-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+              </span>
+            </div>
+            <div class="marquee-card-content">
+              <div class="marquee-card-meta">
+                <span class="marquee-tag">MENTAL HEALTH</span>
+                <span class="marquee-duration">44 min</span>
+              </div>
+              <p class="marquee-title">Learning to Sit With the Silence</p>
+              <div class="marquee-guest-row">
+                <img src="/assets/hero_editorial_model.jpg" alt="Maya & Marcus" class="marquee-guest-avatar">
+                <span class="marquee-guest">Maya Lin & Marcus Vance</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Crisis Lifeline (Coral) -->
+          <div class="marquee-card marquee-card-coral">
+            <div class="marquee-card-media">
+              <img src="/assets/sanctuary_safe_harbor.jpg" alt="Crisis Lifeline" class="marquee-card-img" loading="lazy">
+              <span class="marquee-img-chip">24/7 SUPPORT</span>
+              <span class="marquee-play-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 15h-2v-2h2zm0-4h-2V7h2z"/></svg>
+              </span>
+            </div>
+            <div class="marquee-card-content">
+              <div class="marquee-card-meta">
+                <span class="marquee-tag">HOTLINE ACCESS</span>
+                <span class="marquee-duration">Free • 24/7</span>
+              </div>
+              <p class="marquee-title">988 Lifeline & Crisis Text Line Support</p>
+              <div class="marquee-guest-row">
+                <img src="/assets/card_02_aura.jpg" alt="Crisis Support" class="marquee-guest-avatar">
+                <span class="marquee-guest">Dial 988 or Text HOME to 741741</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Ep 107 (White) -->
+          <div class="marquee-card" data-play-ep="107">
+            <div class="marquee-card-media">
+              <img src="/assets/card_02_aura.jpg" alt="Episode 107" class="marquee-card-img" loading="lazy">
+              <span class="marquee-img-chip">EP #107</span>
+              <span class="marquee-play-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+              </span>
+            </div>
+            <div class="marquee-card-content">
+              <div class="marquee-card-meta">
+                <span class="marquee-tag">RELATIONSHIPS</span>
+                <span class="marquee-duration">51 min</span>
+              </div>
+              <p class="marquee-title">Unspoken Grief in Family Estrangement</p>
+              <div class="marquee-guest-row">
+                <img src="/assets/card_02_aura.jpg" alt="Dr. Elena Rostova" class="marquee-guest-avatar">
+                <span class="marquee-guest">with Dr. Elena Rostova</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Ep 106 (White) -->
+          <div class="marquee-card" data-play-ep="106">
+            <div class="marquee-card-media">
+              <img src="/assets/card_05_bw.jpg" alt="Episode 106" class="marquee-card-img" loading="lazy">
+              <span class="marquee-img-chip">EP #106</span>
+              <span class="marquee-play-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+              </span>
+            </div>
+            <div class="marquee-card-content">
+              <div class="marquee-card-meta">
+                <span class="marquee-tag">BEREAVEMENT</span>
+                <span class="marquee-duration">56 min</span>
+              </div>
+              <p class="marquee-title">Men, Mourning, & the Myth of Stoic Strength</p>
+              <div class="marquee-guest-row">
+                <img src="/assets/card_05_bw.jpg" alt="Samuel Osei" class="marquee-guest-avatar">
+                <span class="marquee-guest">with Samuel Osei</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- DUPLICATE SET 1-6 FOR SEAMLESS 100% INFINITE LOOP -->
+          <div class="marquee-card" data-play-ep="109">
+            <div class="marquee-card-media">
+              <img src="/assets/card_01_arch.jpg" alt="Episode 109" class="marquee-card-img" loading="lazy">
+              <span class="marquee-img-chip">EP #109</span>
+              <span class="marquee-play-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+              </span>
+            </div>
+            <div class="marquee-card-content">
+              <div class="marquee-card-meta">
+                <span class="marquee-tag">NEUROSCIENCE</span>
+                <span class="marquee-duration">48 min</span>
+              </div>
+              <p class="marquee-title">The Neurobiology of Compassion Fatigue</p>
+              <div class="marquee-guest-row">
+                <img src="/assets/card_01_arch.jpg" alt="Dr. Kenji Sato" class="marquee-guest-avatar">
+                <span class="marquee-guest">with Dr. Kenji Sato</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="marquee-card marquee-card-lime" data-play-ep="109">
+            <div class="marquee-card-media">
+              <img src="/assets/somatic_breath_wave.jpg" alt="Somatic Sanctuary" class="marquee-card-img" loading="lazy">
+              <span class="marquee-img-chip">SANCTUARY RESET</span>
+              <span class="marquee-play-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+              </span>
+            </div>
+            <div class="marquee-card-content">
+              <div class="marquee-card-meta">
+                <span class="marquee-tag">SOMATICS</span>
+                <span class="marquee-duration">90 Sec</span>
+              </div>
+              <p class="marquee-title">Nervous System Regulation & Sigh Protocol</p>
+              <div class="marquee-guest-row">
+                <img src="/assets/fig_02_model.jpg" alt="Somatic Guide" class="marquee-guest-avatar">
+                <span class="marquee-guest">Daily Physiological Vagal Reset</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="marquee-card" data-play-ep="108">
+            <div class="marquee-card-media">
+              <img src="/assets/hero_meaningful_listening.jpg" alt="Episode 108" class="marquee-card-img" loading="lazy">
+              <span class="marquee-img-chip">EP #108 • FEATURED</span>
+              <span class="marquee-play-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+              </span>
+            </div>
+            <div class="marquee-card-content">
+              <div class="marquee-card-meta">
+                <span class="marquee-tag">MENTAL HEALTH</span>
+                <span class="marquee-duration">44 min</span>
+              </div>
+              <p class="marquee-title">Learning to Sit With the Silence</p>
+              <div class="marquee-guest-row">
+                <img src="/assets/hero_editorial_model.jpg" alt="Maya & Marcus" class="marquee-guest-avatar">
+                <span class="marquee-guest">Maya Lin & Marcus Vance</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="marquee-card marquee-card-coral">
+            <div class="marquee-card-media">
+              <img src="/assets/sanctuary_safe_harbor.jpg" alt="Crisis Lifeline" class="marquee-card-img" loading="lazy">
+              <span class="marquee-img-chip">24/7 SUPPORT</span>
+              <span class="marquee-play-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 15h-2v-2h2zm0-4h-2V7h2z"/></svg>
+              </span>
+            </div>
+            <div class="marquee-card-content">
+              <div class="marquee-card-meta">
+                <span class="marquee-tag">HOTLINE ACCESS</span>
+                <span class="marquee-duration">Free • 24/7</span>
+              </div>
+              <p class="marquee-title">988 Lifeline & Crisis Text Line Support</p>
+              <div class="marquee-guest-row">
+                <img src="/assets/card_02_aura.jpg" alt="Crisis Support" class="marquee-guest-avatar">
+                <span class="marquee-guest">Dial 988 or Text HOME to 741741</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="marquee-card" data-play-ep="107">
+            <div class="marquee-card-media">
+              <img src="/assets/card_02_aura.jpg" alt="Episode 107" class="marquee-card-img" loading="lazy">
+              <span class="marquee-img-chip">EP #107</span>
+              <span class="marquee-play-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+              </span>
+            </div>
+            <div class="marquee-card-content">
+              <div class="marquee-card-meta">
+                <span class="marquee-tag">RELATIONSHIPS</span>
+                <span class="marquee-duration">51 min</span>
+              </div>
+              <p class="marquee-title">Unspoken Grief in Family Estrangement</p>
+              <div class="marquee-guest-row">
+                <img src="/assets/card_02_aura.jpg" alt="Dr. Elena Rostova" class="marquee-guest-avatar">
+                <span class="marquee-guest">with Dr. Elena Rostova</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="marquee-card" data-play-ep="106">
+            <div class="marquee-card-media">
+              <img src="/assets/card_05_bw.jpg" alt="Episode 106" class="marquee-card-img" loading="lazy">
+              <span class="marquee-img-chip">EP #106</span>
+              <span class="marquee-play-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+              </span>
+            </div>
+            <div class="marquee-card-content">
+              <div class="marquee-card-meta">
+                <span class="marquee-tag">BEREAVEMENT</span>
+                <span class="marquee-duration">56 min</span>
+              </div>
+              <p class="marquee-title">Men, Mourning, & the Myth of Stoic Strength</p>
+              <div class="marquee-guest-row">
+                <img src="/assets/card_05_bw.jpg" alt="Samuel Osei" class="marquee-guest-avatar">
+                <span class="marquee-guest">with Samuel Osei</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Giant Bold Centerpiece Headline (Exact CoSpace Benchmark) -->
+      <div class="hero-centerpiece">
+        <h1 class="hero-giant-title">
+          <span>TURN HEAVY SILENCE</span>
+          <span>INTO <span class="hero-coral-accent">SHARED HEALING</span></span>
+        </h1>
+        <p class="hero-lead">
+          Unhurried conversations on trauma, neurobiology, and relational repair.<br>
+          Come for the science, stay for the human connection.
+        </p>
+
+        <!-- Ticket Pass CTA & Community Proof Cluster -->
+        <div class="hero-cta-wrapper">
+          <div class="cospace-ticket-cta" data-play-ep="108" role="button" tabindex="0" title="Stream Episode 108: Learning to Sit With Silence">
+            <div class="ticket-text-col">
+              <span class="ticket-sub">Season 04,</span>
+              <span class="ticket-main">Stream Free</span>
+            </div>
+            <div class="ticket-arrow-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Community Proof (Overlapping Avatars + Warm Count) -->
+          <div class="hero-community-proof">
+            <div class="avatar-cluster">
+              <img src="/assets/hero_editorial_model.jpg" alt="Community Listener" class="cluster-avatar" loading="lazy">
+              <img src="/assets/fig_02_model.jpg" alt="Community Listener" class="cluster-avatar" loading="lazy">
+              <img src="/assets/card_01_arch.jpg" alt="Community Listener" class="cluster-avatar" loading="lazy">
+              <img src="/assets/card_05_bw.jpg" alt="Community Listener" class="cluster-avatar" loading="lazy">
+            </div>
+            <p class="community-proof-text">
+              <span class="proof-count">48,000+ listeners</span> and healing
+            </p>
+          </div>
+        </div>
+
+        <!-- Platform Badges -->
+        <div class="hero-platforms-bar">
+          <span class="platforms-label">Available Everywhere:</span>
+          <div class="platform-chips">
+            <span class="platform-chip">Spotify Top 20</span>
+            <span class="platform-chip">Apple Podcasts</span>
+            <span class="platform-chip">YouTube 4K Studio</span>
+            <span class="platform-chip">Substack Dispatch</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: FEATURED CINEMATIC EPISODE CARD -->
+    <section class="section-container">
+      <div class="section-badge-wrap">
+        <span class="section-badge">CRITIC'S PICK</span>
+        <h2 class="section-title">Episode of the Week</h2>
+      </div>
+
+      <div class="cospace-featured-card">
+        <div class="featured-media-col">
+          <img src="/assets/hero_meaningful_listening.jpg" alt="Episode 108 Studio Session" class="featured-cover-img" loading="lazy">
+          <div class="media-overlay-badge">
+            <span class="media-duration">44:18 MIN</span>
+            <span class="media-bitrate">STUDIO MASTER FLAC</span>
+          </div>
+        </div>
+
+        <div class="featured-content-col">
+          <div class="featured-meta">
+            <span class="meta-tag">EPISODE #108</span>
+            <span class="meta-category">MENTAL HEALTH & RESILIENCE</span>
+            <span class="meta-date">OCTOBER 2026</span>
+          </div>
+          <h3 class="featured-title">Learning to Sit With the Silence: Why We Rush to Fix What Only Needs to Be Felt</h3>
+          <p class="featured-summary">
+            Maya and Marcus examine the cultural addiction to rapid reassurance. When someone shares profound heartache, why is our first instinct to offer unsolicited advice or silver linings? A masterclass in relational holding, nervous system safety, and the healing art of enduring presence.
+          </p>
+
+          <div class="featured-chapters-wrap">
+            <span class="media-tape-tag">EDITORIAL MASTER TAPE • DIRECT SOUNDBITES</span>
+            <div class="soundbite-row" data-seek="494" data-title="The Fixer's Reflex">
+              <button class="soundbite-play" aria-label="Play chapter at 08:14">▶</button>
+              <div class="soundbite-meta">
+                <span class="soundbite-time">08:14</span>
+                <span class="soundbite-title">The "Fixer's Reflex": Why premature advice is actually the listener's nervous system trying to escape distress.</span>
+              </div>
+            </div>
+            <div class="soundbite-row" data-seek="1365" data-title="The 90-Second Sigh">
+              <button class="soundbite-play" aria-label="Play chapter at 22:45">▶</button>
+              <div class="soundbite-meta">
+                <span class="soundbite-time">22:45</span>
+                <span class="soundbite-title">The Physiological Sigh Protocol: Marcus demonstrates live breath calibration to dissolve sympathetic defensive posture.</span>
+              </div>
+            </div>
+            <div class="soundbite-row" data-seek="2172" data-title="The Silent Room Protocol">
+              <button class="soundbite-play" aria-label="Play chapter at 36:12">▶</button>
+              <div class="soundbite-meta">
+                <span class="soundbite-time">36:12</span>
+                <span class="soundbite-title">The "Holding Room" Rule: Exactly how to sit beside someone in acute grief without uttering a single cliché.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="featured-actions">
+            <button class="cospace-pill-btn cospace-pill-btn-primary" data-play-ep="108">
+              <span class="play-icon-state">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+              </span>
+              <span>Play Episode (44 min)</span>
+            </button>
+            <a href="/episodes.html#ep-108" class="cospace-pill-btn cospace-pill-btn-outline">
+              <span>View Full Show Notes & Transcript</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: WHY LISTENERS STAY (Atmospheric Banner with 4 Interactive Floating Pills) -->
+    <section class="section-container">
+      <div class="cospace-atmospheric-card">
+        <img id="feature-display-img" src="/assets/hero_scroll_editorial.jpg" alt="Atmospheric Studio Feature" class="atmospheric-bg-img" loading="lazy">
+        <div class="atmospheric-scrim"></div>
+
+        <div class="atmospheric-inner-content">
+          <div class="atmospheric-header">
+            <span id="feature-display-tag" class="atmospheric-kicker">01 / SOMATIC GROUNDING</span>
+            <h2 id="feature-display-title" class="atmospheric-headline">Before we analyze the grief, we regulate the nervous system.</h2>
+            <p id="feature-display-desc" class="atmospheric-lead">
+              Every episode begins with a 90-second physiological sigh and sensory check-in. We do not jump into traumatic narratives with an elevated heart rate.
+            </p>
+            <blockquote id="feature-display-quote" class="atmospheric-quote">
+              “The breath is the first permission slip we give our body to tell the truth.” — Marcus Vance
+            </blockquote>
+          </div>
+
+          <!-- 4 Interactive Mode Pills -->
+          <div class="atmospheric-pills-row">
+            <button class="feature-pill-btn active" data-mode="01">
+              <span class="pill-num">01</span>
+              <span class="pill-name">Somatic Grounding</span>
+            </button>
+            <button class="feature-pill-btn" data-mode="02">
+              <span class="pill-num">02</span>
+              <span class="pill-name">Zero Advice-Giving</span>
+            </button>
+            <button class="feature-pill-btn" data-mode="03">
+              <span class="pill-num">03</span>
+              <span class="pill-name">Clinical + Human</span>
+            </button>
+            <button class="feature-pill-btn" data-mode="04">
+              <span class="pill-num">04</span>
+              <span class="pill-name">24/7 Crisis Safety</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: SOMATIC COMPASS & NERVOUS SYSTEM CALIBRATOR -->
+    <section class="section-container brain-compass-section" id="brain-compass">
+      <div class="section-badge-wrap">
+        <span class="section-badge">INTERACTIVE SOMATIC COMPASS</span>
+        <h2 class="section-title">Where Is Your Nervous System Right Now?</h2>
+        <p class="section-subtitle">The human brain doesn't need another generic self-help listicle. It needs state-matched attunement. Select your current physiological state to receive exact acoustic grounding.</p>
+      </div>
+
+      <!-- State Selection Tabs -->
+      <div class="brain-state-tabs" role="tablist">
+        <button class="brain-state-tab active" data-state="hyper" role="tab" aria-selected="true">
+          <span class="state-icon">⚡</span>
+          <span class="state-label">Hyperarousal</span>
+          <span class="state-subtitle">Racing mind • Tight chest</span>
+        </button>
+        <button class="brain-state-tab" data-state="dorsal" role="tab" aria-selected="false">
+          <span class="state-icon">🧊</span>
+          <span class="state-label">Dorsal Shutdown</span>
+          <span class="state-subtitle">Numb • Exhausted • Ghosting</span>
+        </button>
+        <button class="brain-state-tab" data-state="attachment" role="tab" aria-selected="false">
+          <span class="state-icon">💔</span>
+          <span class="state-label">Attachment Agony</span>
+          <span class="state-subtitle">Ruminating • Fear of loss</span>
+        </button>
+        <button class="brain-state-tab" data-state="compassion" role="tab" aria-selected="false">
+          <span class="state-icon">🕯️</span>
+          <span class="state-label">Compassion Fatigue</span>
+          <span class="state-subtitle">Empathy spent • Overextended</span>
+        </button>
+      </div>
+
+      <!-- Interactive Brain State Detail Card -->
+      <div class="brain-detail-display" id="brain-detail-card">
+        <div class="brain-neural-col">
+          <div class="brain-state-badge" id="brain-badge">SYMPATHETIC OVERLOAD • FIGHT / FLIGHT</div>
+          <h3 class="brain-detail-title" id="brain-title">Your amygdala is firing false alarm sirens.</h3>
+          <p class="brain-detail-desc" id="brain-desc">
+            When you're hyperaroused, your prefrontal cortex loses bandwidth. Words of logic feel infuriating. Your heart rate variability is compressed, and your neck and diaphragm are braced for impact. We do not try to analyze why you are panicked; we first signal physiological safety to your vagus nerve.
+          </p>
+
+          <div class="brain-neural-box">
+            <span class="box-kicker">WHAT YOUR BRAIN NEEDS RIGHT NOW</span>
+            <p id="brain-need">Low acoustic frequencies, lengthened expiratory breath (exhale twice as long as inhale), and zero cognitive demands.</p>
+          </div>
+
+          <div class="brain-rx-box">
+            <span class="rx-kicker">RECOMMENDED AUDIO PRESCRIPTION</span>
+            <div class="rx-ep-title" id="brain-rx-title">Episode #108: The 90-Second Physiological Sigh</div>
+            <div class="rx-actions">
+              <button class="cospace-pill-btn cospace-pill-btn-primary rx-play-btn" id="brain-rx-play" data-play-ep="108">
+                <span>▶ Play Calibrating Episode</span>
+              </button>
+              <span class="rx-duration" id="brain-rx-duration">44 Min • Acoustic Somatics</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="brain-somatic-col">
+          <div class="breath-visualizer-card">
+            <span class="breath-kicker">LIVE SOMATIC PACER</span>
+            <div class="breath-halo-ring" id="breath-halo">
+              <div class="breath-halo-core">
+                <span class="breath-word" id="breath-phase">INHALE</span>
+                <span class="breath-seconds" id="breath-count">4s</span>
+              </div>
+            </div>
+            <p class="breath-caption">Synchronize your diaphragm with the pulsing ring. Inhale deeply through the nose, take a secondary micro-sip at the top, and exhale slowly through mouth.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: IN THE BOOTH - HOST DISPATCH DESK -->
+    <section class="section-container">
+      <div class="section-badge-wrap">
+        <span class="section-badge">BEHIND THE ACOUSTIC BAFFLES</span>
+        <h2 class="section-title">The Booth Dispatch Desk</h2>
+        <p class="section-subtitle">No scripts. No teleprompters. Just two humans with decades in conflict zones and therapy clinics, sitting across an analog Shure SM7B.</p>
+      </div>
+
+      <div class="cospace-hosts-grid">
+        <!-- Host 1: Maya Lin -->
+        <div class="cospace-host-card">
+          <div class="host-card-media">
+            <img src="/assets/card_01_arch.jpg" alt="Maya Lin in Studio" class="host-img" loading="lazy">
+            <div class="host-pill-role">INVESTIGATIVE PRODUCER</div>
+          </div>
+          <div class="host-card-info">
+            <div class="host-header-line">
+              <h3 class="host-name">Maya Lin</h3>
+              <span class="host-pronouns">she / her</span>
+            </div>
+            <p class="host-role-title">Co-Host & Sound Designer • 14 Years Investigative Audio</p>
+            <p class="host-bio-excerpt">
+              Former foreign correspondent who spent a decade reporting in high-trauma environments before discovering that unexpressed grief in ordinary living rooms carries identical physiological weight.
+            </p>
+
+            <div class="host-field-note">
+              <span class="note-tag">MAYA'S BOOTH RULE</span>
+              <p>“If our guest pauses for ten seconds, Marcus and I do not rush to fill the silence. That tenth second is usually where the truth finally gets brave enough to exhale.”</p>
+            </div>
+
+            <div class="host-card-footer">
+              <span class="host-meta-item">Mic: Shure SM7B • Cloudlifter CL-1</span>
+              <a href="/hosts.html#maya" class="host-link-btn">Maya's Studio Rituals &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Host 2: Marcus Vance -->
+        <div class="cospace-host-card">
+          <div class="host-card-media">
+            <img src="/assets/fig_02_model.jpg" alt="Marcus Vance in Studio" class="host-img" loading="lazy">
+            <div class="host-pill-role">LICENSED SOMATIC CLINICIAN</div>
+          </div>
+          <div class="host-card-info">
+            <div class="host-header-line">
+              <h3 class="host-name">Marcus Vance, LMFT</h3>
+              <span class="host-pronouns">he / him</span>
+            </div>
+            <p class="host-role-title">Co-Host & Relational Clinician • 1,400+ Clinical Hours</p>
+            <p class="host-bio-excerpt">
+              Specializing in nervous system co-regulation, complex bereavement, and emotional repair. Marcus translates intimidating polyvagal theory into tender, actionable, everyday human conversations.
+            </p>
+
+            <div class="host-field-note">
+              <span class="note-tag">MARCUS'S BOOTH RULE</span>
+              <p>“Never offer a solution to an emotional injury that hasn't been thoroughly witnessed first. Advice before empathy is just veiled avoidance.”</p>
+            </div>
+
+            <div class="host-card-footer">
+              <span class="host-meta-item">Mic: Electro-Voice RE20 • Neve Preamp</span>
+              <a href="/hosts.html#marcus" class="host-link-btn">Marcus's Clinical Notes &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: LETTERS FROM THE HARBOR -->
+    <section class="section-container">
+      <div class="section-badge-wrap">
+        <span class="section-badge">COMMUNITY DISPATCHES</span>
+        <h2 class="section-title">Letters From the Harbor</h2>
+        <p class="section-subtitle">Unsolicited voice memos and postal dispatches left on our studio voicemail at 3:00 AM.</p>
+      </div>
+
+      <div class="cospace-reviews-grid">
+        <div class="cospace-review-card">
+          <div class="dispatch-header">
+            <span class="dispatch-id">DISPATCH #412</span>
+            <span class="dispatch-timestamp">03:14 AM • ICU PARKING LOT</span>
+          </div>
+          <p class="review-quote">
+            “I sit in my Honda Civic for 25 minutes after every 12-hour pediatric oncology shift before I turn the key. Maya and Marcus don’t tell me 'everything happens for a reason.' They give me permission to sit in the dark and let my hands shake until my nervous system knows I survived the day.”
+          </p>
+          <div class="dispatch-footer">
+            <div class="review-author">
+              <span class="author-name">Clara M., RN</span>
+              <span class="author-loc">Trauma Nurse • Chicago, IL</span>
+            </div>
+            <span class="dispatch-audio-badge">🎙️ 2:14 Voice Memo</span>
+          </div>
+        </div>
+
+        <div class="cospace-review-card">
+          <div class="dispatch-header">
+            <span class="dispatch-id">DISPATCH #389</span>
+            <span class="dispatch-timestamp">SUNDAY MORNING • MONTREAL</span>
+          </div>
+          <p class="review-quote">
+            “Episode 108 saved my relationship with my grieving father. For eight months after mom died, I kept trying to take him golfing, keep him busy, fix his sorrow. Listening to Marcus made me realize my cheerful 'solutions' were just my own fear of his tears. Last Sunday, I sat at his kitchen table for two hours. We barely spoke three sentences. It was the first time he didn't look exhausted around me.”
+          </p>
+          <div class="dispatch-footer">
+            <div class="review-author">
+              <span class="author-name">David S.</span>
+              <span class="author-loc">Architect • Montreal, QC</span>
+            </div>
+            <span class="dispatch-audio-badge">✉️ Written Letter</span>
+          </div>
+        </div>
+
+        <div class="cospace-review-card">
+          <div class="dispatch-header">
+            <span class="dispatch-id">DISPATCH #447</span>
+            <span class="dispatch-timestamp">MIDNIGHT METRO • BERLIN</span>
+          </div>
+          <p class="review-quote">
+            “In an internet culture completely addicted to fast hot-takes and robotic 5-step productivity hacks, Care To Listen is an emotional lighthouse. It honors the slow, stubborn, messy physiology of healing. I assign specific episodes to my clinical interns before they ever see their first patient.”
+          </p>
+          <div class="dispatch-footer">
+            <div class="review-author">
+              <span class="author-name">Dr. Elena Rostova</span>
+              <span class="author-loc">Family Systems Psychologist • Berlin</span>
+            </div>
+            <span class="dispatch-audio-badge">🎙️ 4:02 Voice Memo</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: 24/7 CRISIS & RAPID SAFETY CONSOLE -->
+    <section class="section-container" aria-label="Crisis Support & Immediate Help">
+      <div class="cospace-crisis-console">
+        <!-- Left: Empathetic Attunement & Status -->
+        <div class="crisis-console-left">
+          <div class="crisis-status-pill">
+            <span class="crisis-live-pulse"></span>
+            <span class="crisis-status-text">24/7 LIVE LIFELINE DESK • 100% FREE & CONFIDENTIAL</span>
+          </div>
+          <h3 class="crisis-console-headline">You don’t have to carry this alone tonight.</h3>
+          <p class="crisis-console-lead">
+            If you are overwhelmed, in emotional pain, or caring for someone in acute distress, trained crisis responders are waiting right now to listen without judgment.
+          </p>
+          <div class="crisis-trust-badges">
+            <span class="trust-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              100% Anonymous
+            </span>
+            <span class="trust-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Avg. Response &lt; 30s
+            </span>
+            <span class="trust-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              No Insurance Needed
+            </span>
+          </div>
+        </div>
+
+        <!-- Right: Rapid Direct-Action Tappable Cards -->
+        <div class="crisis-console-grid">
+          <!-- Voice Lifeline -->
+          <a href="tel:988" class="crisis-action-card card-call" aria-label="Call or text 988 for suicide and crisis lifeline">
+            <div class="action-card-header">
+              <div class="action-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <span class="action-tag">TAP TO CALL / TEXT</span>
+            </div>
+            <div class="action-card-body">
+              <span class="action-main-number">Call or Text 988</span>
+              <span class="action-subtext">Suicide & Crisis Lifeline • USA & Canada</span>
+            </div>
+          </a>
+
+          <!-- Crisis Text Line -->
+          <a href="sms:741741?body=HOME" class="crisis-action-card card-text" aria-label="Text HOME to 741741 for Crisis Text Line">
+            <div class="action-card-header">
+              <div class="action-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <span class="action-tag">TAP TO TEXT</span>
+            </div>
+            <div class="action-card-body">
+              <span class="action-main-number">Text HOME to 741741</span>
+              <span class="action-subtext">Free Crisis Counseling • Available 24/7</span>
+            </div>
+          </a>
+
+          <!-- Global Lifeline Directory -->
+          <a href="/resources.html" class="crisis-action-card card-global" aria-label="Browse full international directory">
+            <div class="action-card-header">
+              <div class="action-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <span class="action-tag">INTERNATIONAL</span>
+            </div>
+            <div class="action-card-body">
+              <span class="action-main-number">Worldwide Lifelines &rarr;</span>
+              <span class="action-subtext">UK 111 • AU 13 11 14 • Global Helplines</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER DISPATCH -->
+    <section class="section-container">
+      <div class="cospace-newsletter-card">
+        <div class="newsletter-col">
+          <span class="section-badge">WEEKLY DISPATCH</span>
+          <h3 class="newsletter-title">The Sunday Sanctuary Letter</h3>
+          <p class="newsletter-desc">One unhurried reflection from Maya, one somatic nervous system prompt from Marcus, and curated reading. Zero spam, ever.</p>
+        </div>
+        <div class="newsletter-col">
+          <form id="newsletter-form" class="cospace-inline-form">
+            <input type="email" placeholder="Enter your email address" required class="cospace-input">
+            <button type="submit" class="cospace-pill-btn cospace-pill-btn-primary">
+              <span>Subscribe</span>
+            </button>
+          </form>
+          <p class="newsletter-disclaimer">Join 42,000+ unhurried readers. Unsubscribe with one click anytime.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MASTER COSPACE DARK CHARCOAL FOOTER -->
+  <footer class="cospace-footer-wrapper">
+    <div class="cospace-footer-container">
+      <!-- Huge Typographic Brand Signature -->
+      <div class="footer-hero-brand">
+        <span class="footer-giant-text">CareToListen<span class="footer-asterisk">*</span></span>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-col-about">
+          <p class="footer-tagline">
+            An independent, listener-supported audio sanctuary produced in Seattle & Minneapolis. Dedicated to the radical premise that listening is an act of love.
+          </p>
+          <div class="footer-license-note">
+            <span>Broadcast in lossless FLAC audio.</span>
+            <span>Trauma-informed editorial standards.</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Episodes</h4>
+          <ul class="footer-links">
+            <li><a href="/episodes.html">Latest Broadcasts</a></li>
+            <li><a href="/episodes.html?category=Mental+Health">Mental Health & Somatics</a></li>
+            <li><a href="/episodes.html?category=Grief">Grief & Bereavement</a></li>
+            <li><a href="/episodes.html?category=Relationships">Relational Repair</a></li>
+            <li><a href="/videos.html">4K Studio Soundstage</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="/hosts.html">Meet Maya & Marcus</a></li>
+            <li><a href="/guests.html">Guest Directory</a></li>
+            <li><a href="/about.html">About & Ethos</a></li>
+            <li><a href="/mission.html">Our 4 Pillars</a></li>
+            <li><a href="/request-episode.html">Pitch an Episode</a></li>
+            <li><a href="/become-a-guest.html">Guest Casting</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Care & Support</h4>
+          <ul class="footer-links">
+            <li><a href="/resources.html">24/7 Crisis Directory</a></li>
+            <li><a href="tel:988">988 Suicide & Crisis Lifeline</a></li>
+            <li><a href="/contact.html">Studio Inquiries</a></li>
+            <li><a href="/admin.html">Studio CMS (Staff)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p class="footer-copy">&copy; 2026 Care To Listen Media Collective. All rights reserved.</p>
+        <div class="footer-social-chips">
+          <a href="https://spotify.com" target="_blank" rel="noopener">Spotify</a>
+          <a href="https://apple.com" target="_blank" rel="noopener">Apple Podcasts</a>
+          <a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://substack.com" target="_blank" rel="noopener">Substack</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING AUDIO PLAYER PILL DOCK -->
+  <div id="floating-audio-dock" class="cospace-audio-dock" role="region" aria-label="Persistent Audio Player">
+    <div class="dock-inner">
+      <div class="dock-left">
+        <img id="player-track-thumb" src="/assets/hero_meaningful_listening.jpg" alt="Episode Thumbnail" class="dock-thumb">
+        <div class="dock-meta">
+          <div class="dock-eyebrow">
+            <span id="player-track-ep" class="dock-ep-tag">EP #108</span>
+            <div id="player-eq-bars" class="eq-bars">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+          <span id="player-track-title" class="dock-title">Learning to Sit With the Silence</span>
+          <span id="player-track-guest" class="dock-guest">with Maya Lin & Marcus Vance</span>
+        </div>
+      </div>
+
+      <div class="dock-center">
+        <div class="dock-controls">
+          <button id="player-play-btn" class="dock-play-circle" aria-label="Play or pause audio">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.55.83l11-7.5a1 1 0 0 0 0-1.66l-11-7.5A1 1 0 0 0 7 4.5z"/></svg>
+          </button>
+        </div>
+        <div class="dock-scrubber-wrap">
+          <span id="player-time-current" class="dock-time">00:00</span>
+          <div id="player-progress-bar" class="dock-progress-track">
+            <div id="player-progress-fill" class="dock-progress-fill"></div>
+          </div>
+          <span id="player-time-total" class="dock-time">44:18</span>
+        </div>
+      </div>
+
+      <div class="dock-right">
+        <div class="dock-vol-group">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+          <input id="player-volume-slider" type="range" min="0" max="1" step="0.05" value="0.8" class="dock-volume" aria-label="Audio Volume">
+        </div>
+        <button id="player-toggle-btn" class="dock-close-pill" aria-label="Minimize player">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
